@@ -1,0 +1,23 @@
+# Wisdom around common lab tasks {-}
+
+## Cool Packages to know about 
+
+* [bookdown](https://bookdown.org/yihui/bookdown/): an R package that lets you build websites and "books" really easily (how this site is built). 
+* [exactextractr](https://rdrr.io/cran/exactextractr/): a great R package that helps you use rasters and shapefiles to figure out the values in the raster within the shapefile area. Gives lots of control over how you extract - aggregating functions, weighting each raster cell, etc. 
+* [pbapply](https://www.rdocumentation.org/packages/pbapply/versions/1.4-3/topics/pbapply): an R package that lets you use the classic lapply function, but provides a progress bar!
+* [profvis](http://rstudio.github.io/profvis/): an R package that can give you a graphical representation of how quickly each line of a block of code is running. A great tool when something is running slower than expected but you don't really know where it's going wrong. 
+
+* [Our lab package](https://github.com/Duke-EJ-Lab/lab.tools): an R package with a mismash of random helpful or fun functions. 
+
+## General Stumbling Blocks
+
+* Aggregating - what's the best function?
+
+* leading 0's 
+
+
+## Shapefile Stumbling Blocks 
+
+* Projections
+
+* Extracting accurately

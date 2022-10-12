@@ -1,0 +1,15 @@
+# Onboarding {-}
+
+## Tools
+
+
+## Code Organization
+
+* [**GitHub**](https://github.com/Duke-EJ-Lab)
+
+## Data Organization
+
+* Box
+
+## Lab Tools Package
+
