@@ -1,0 +1,18 @@
+# General Stumbling Blocks {-}
+
+## Theoretical Stumbling Blocks {-}
+
+* Test/Train
+
+## Data Cleaning Stumbling Blocks {-}
+
+* Aggregating - what's the best function?
+
+* leading 0's 
+
+
+## Shapefile Stumbling Blocks {-}
+
+* Projections
+
+* Extracting accurately

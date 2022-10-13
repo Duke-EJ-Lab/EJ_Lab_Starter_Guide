@@ -1,9 +1,46 @@
 # Data {-}
 
-## Box
+Lab data is stored in a few places, but should *only* be in one of those places: Duke Box, or one of the lab VM's. 
 
-## VM's
+## Box {-}
 
-## Where do I put my data
+The EJ Lab Box has three main folders, `projects`, `clean`, and `raw`. 
 
-## What data do we already have ready to go?
+1) We treat `raw` as effectively a read-only folder, things are added relatively rarely, and when they are they are documented well. It's important when things are added to the raw folder to document well **when** the data was downloaded, and **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary).
+
+2) `clean` holds processed data that you might want to directly pull into a project. For something to get added to clean a few conditions need to be met: the raw data is in the `raw` folder, and the code that cleans it is in the lab `cleaning` github. This is only for data that might be useful for someone else on a different lab project. A dataset to include might be: the average PM for every year 2000-2020 for each county in the contiguous US. A dataset not to include might be: a panel that includes 21 day rolling mean county level PM observation that you built to purpose for a model. 
+
+```
+ejlab
+ ├── projects
+ ├── clean
+ │	  ├── rsei
+ │	  ├── polidata
+ │	  ├── pm25
+ │	  └── [Month]_[Year]_ontime.csv (for Jan-Dec 2006-2018)
+ ├── raw
+ │   ├── GACC
+ │   │	 └── National_GACC_Current_20200226.shp (and associated dbf, prj) 
+ │   ├── tl_2019_us_county
+ │   ├── tl_2010_us_state
+ │   ├── all_national_zips.rds
+ │   ├── counties.RDS
+ │   └── state_fips_codes.csv
+```
+
+## VM's {-}
+
+There are a few datasets that should only exist on Duke owned machines (aka the VM's) or (if they have even higher protections) that can only exist in the protected research data network. Information on getting access to those spaces can be found in the onboarding section. This means the original datasets, and ANY data that is created from it/combined with it/modeled using it, excluding simple tables that might be need to go in a publication. The datasets currently used in lab that these protections apply to are: 
+
+* InfoUSA
+* Corelogic
+
+## What data do we already have ready to go? {-}
+
+### RSEI {-}
+
+### PM 2.5 {-}
+
+The PM 2.5 data that lives in the Dropbox is in a raster format, one of the finest resolution datasets built for PM 2.5. Information on the different products can be found [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/)
+
+### various boundary shapefiles {-}

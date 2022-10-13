@@ -1,0 +1,64 @@
+# Tools to know about {-}
+
+## Basic packages to know about (R) {-}
+
+* [data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html): hard to read, but faster on average data manipulation
+* [raster](https://cran.r-project.org/web/packages/raster/index.html): work with raster data
+* [rmarkdown](https://rmarkdown.rstudio.com/): the R notebook interface, useful for saving EDA with explanation or for reports, but generally not used for heavy lifting final code. 
+* [sf](https://r-spatial.github.io/sf/): spatial data, more flexible 
+* [sp](https://www.rdocumentation.org/packages/sp/versions/1.5-0): spatial data, more built in options
+* [tidyverse](https://www.tidyverse.org/)
+  * [dplyr](https://dplyr.tidyverse.org/): "a grammar of data manipulation"
+  * [ggplot2](https://ggplot2.tidyverse.org/): quick and easy graphics
+  * [lubridate](https://lubridate.tidyverse.org/): easier date/time formats
+  * [readr](https://readr.tidyverse.org/): fast and easy way to read flat files
+  * [stringr](https://stringr.tidyverse.org/): common string manipulations
+  * [tidyr](https://tidyr.tidyverse.org/): reshaping data
+
+
+## Cool packages to know about (R) {-}
+
+* [bookdown](https://bookdown.org/yihui/bookdown/): lets you build websites and "books" really easily (how this site is built). 
+* [caret](https://topepo.github.io/caret/): streamlined model building (Classification And REgression Training) that handles data splitting, pre processing, feature selection, and model tuning and selection. 
+* [datapasta](https://github.com/MilesMcBain/datapasta): if you ever copy and pasta data from an online table that you later use in your research you should be using this. It lets you copy and paste data directly into an R object, that can then be saved into your reproducible workflow. 
+* [exactextractr](https://rdrr.io/cran/exactextractr/): helps you use rasters and shapefiles to figure out the values in the raster within the shapefile area. Gives lots of control over how you extract - aggregating functions, weighting each raster cell, etc. 
+* [feather](https://www.rstudio.com/blog/feather/): a binary data format that is language agnostic with high write and read performance.
+* [patchwork](https://github.com/thomasp85/patchwork): lets you arrange several ggplot plots into table like configurations.
+* [pbapply](https://www.rdocumentation.org/packages/pbapply/versions/1.4-3/topics/pbapply): the classic lapply function, but provides a progress bar!
+* [profvis](http://rstudio.github.io/profvis/): gives you a graphical representation of how quickly each line of a block of code is running. A great tool when something is running slower than expected but you don't really know where it's going wrong. 
+* [ranger](https://github.com/ranger/ranger): fast random forests!
+* [reticulate](https://rstudio.github.io/reticulate/): the R interface to Python.
+* [roxygen](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html): critical for package development. Learn it by contributing to the lab package!
+* [rvest](https://rvest.tidyverse.org/): scrape the internet!
+* [sqldf](https://github.com/ggrothendieck/sqldf): another way to manipulate data in R. sometimes useful since it uses SQLite as the underlying database, so for large data it is usually much faster than straight R. Great for an initial read-in filter. 
+* [tidycensus](https://walker-data.com/tidycensus/): work with Census data directly from your R code. You give it the variable titles and years you want and it pulls it from the Census API. Great for reproducibility!
+* [tidytext](https://juliasilge.github.io/tidytext/): text mining
+* [wesanderson](https://github.com/karthik/wesanderson): color palletes based on Wes Anderson's movies, some of them make some really beautiful plots. (Personally I love `Zissou1`, `Darjeeling1` and `GrandBudapest1` -Anne)
+* [validate](https://github.com/data-cleaning/validate): great to do checks on your final panel before modeling, makes it easy to "check whether data lives up to expectations you have based on domain knowledge". A great thing to build into a final code package - also helps people who come back to your code what to expect.
+* [vroom](https://github.com/tidyverse/vroom): frequently the fastest way to read data in to R. `readr` has a throughput of 44.02 MB/sec, while vroom reaches 1.23 GB/sec.
+
+### Our lab package {-}
+
+* **[Our lab package](https://github.com/Duke-EJ-Lab/lab.tools)**: an R package with a mismash of random helpful or fun functions. A sample of functions below. Anyone can add to the package, and it's great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator).
+  * `detach_all_packages`: quickly wipes the packages loaded to your R environment, useful for ensuring reproducibility (since the packages you have loaded impact how things run!)
+  * `beep_alert`: a function that tells you aloud that your code has finished running. Useful when you have things running just long enough that you want to go look at your email or something.
+  * `merge_verbose`: wraps the base merge function, but spits out some info on your merge to the console.
+  * some extra ggplot themes
+
+## Cool functions to know about (R) {-}
+
+* `file.path()`: a function that lets you reference paths without building the path manually (eg `user/anne/data/testing` vs `file.path("user", "anne", "data", "testing")`), which is great because it means your code won't break when it crosses to a different OS. 
+* `Hmisc::describe()`: sometimes more useful version of `summary` to peek into a dataset. It adds the number of distinct observations, as well as directly showing the highest and lowest observations.
+
+## Basic packages to know about (Python) {-}
+
+* [NumPy](https://numpy.org/): numerical computing, random number generation, etc
+* [Pandas](https://pandas.pydata.org/): flexible data structures, data wrangling and cleaning
+* [Matplotlib](https://matplotlib.org/): data visualization
+* [scikit-learn](https://scikit-learn.org/stable/): classification, regression, clustering, and some cleaning
+
+## Cool packages to know about (Python) {-}
+
+* [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/): scraping
+
+## Cool functions to know about (Python) {-}

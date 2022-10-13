@@ -1,7 +1,5 @@
 # People {-}
 
-## People {-}
-
 **Leadership**
 
 [Kay Jowers](https://nicholasinstitute.duke.edu/people/kay-jowers) - Director of the Just Environments Program in the Nicholas Institute for Energy, Environment & Sustainability 
@@ -31,8 +29,14 @@ Zoe Macomber
 
 ## Alums {-}
 
+[Ryan Hastings](https://mobile.twitter.com/ryanjhast), 2022 - Econ PreDoc @ Wharton Real Estate
+
 [Annabel (Qihui) Hu](https://www.heinz.cmu.edu/faculty-research/profiles/hu-qihui/), 2020 - PhD Candidate @ CMU Heinz
 
 [Daisy (Xiaoou) Zhan](https://business.wisc.edu/directory/profile/xiaoou-zhan/), 2020 - PhD Candidate @ U Wisconsin School of Business | Real Estate and Urban Land Economics
+
+[Davis Berlind](https://davis-berlind.github.io/), 2020 - PhD Candidate @ UCLA Statistics
+
+[Brian Wong](https://www.ornl.gov/staff-profile/brian-wong), 2019 - MBA Candidate @ Duke Fuqua
 
 [Anne Driscoll](http://www.adriscoll.com/), 2018 - Staff RA @ EJ Lab

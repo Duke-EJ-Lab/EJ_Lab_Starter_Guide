@@ -1,15 +1,12 @@
 # Onboarding {-}
 
-## Tools
+## Code Organization {-}
 
+Code for lab projects all lives in the [**lab GitHub**](https://github.com/Duke-EJ-Lab).
 
-## Code Organization
-
-* [**GitHub**](https://github.com/Duke-EJ-Lab)
-
-## Data Organization
+## Data Organization {-}
 
 * Box
 
-## Lab Tools Package
+## Lab Tools {-}
 

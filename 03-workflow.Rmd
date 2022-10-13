@@ -1,20 +1,22 @@
-# Workflow
+# Workflow {-}
 
-## GitHub
-
-
-## Personal Computers
+## GitHub {-}
 
 
-## VM's
+## Personal Computers {-}
 
 
-## Starting up a Project
+## VM's {-}
 
 
-## Documenting a Project
+## Starting up a Project {-}
 
 
-## Closing out a Project
+## Documenting a Project {-}
 
-* Save out 
+
+## Closing out a Project {-}
+
+* Go through your code and comment well
+* 
+* hand off to a team mate and make sure they can run 
