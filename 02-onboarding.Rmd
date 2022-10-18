@@ -2,7 +2,17 @@
 
 ## Code Organization {-}
 
-Code for lab projects all lives in the [**lab GitHub**](https://github.com/Duke-EJ-Lab).
+Code for lab projects all lives in the [**lab GitHub**](https://github.com/Duke-EJ-Lab). Many of the repos discussed below are set to only be accessible to members of the GitHub lab group, so be sure to request access. 
+
+### Individual Code Organization {-}
+
+All lab projects start from a [reproducible project template](https://github.com/Duke-EJ-Lab/reproducible_project_template). Starting all projects from this file structure gives a framework that helps make our data and code more uniform, helping with reproducibility and keeping institutional knowledge as students join and leave projects.
+
+This template is set up with example R files, but the same ideas apply regardless of the language you're using. The template repo itself documents what should go in what folder, and includes examples of documentation and commenting throughout code files. An example of the template in use is the [COVID housing precarity](https://github.com/Duke-EJ-Lab/covid_housing_precarity) repo. 
+
+### Lab Code Organization {-}
+
+
 
 ## Data Organization {-}
 

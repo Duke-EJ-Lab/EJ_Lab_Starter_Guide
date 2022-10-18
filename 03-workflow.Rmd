@@ -2,7 +2,6 @@
 
 ## GitHub {-}
 
-
 ## Personal Computers {-}
 
 
@@ -18,5 +17,11 @@
 ## Closing out a Project {-}
 
 * Go through your code and comment well
-* 
+
 * hand off to a team mate and make sure they can run 
+
+* go through the data you used and decide if anything in your `ejlab/project` folder might actually be something that generalizes to other lab projects. If it does, move the raw data to the `ejlab/raw` folder (or a relevant subfolder) and document the **what**, **when**, **how** of the data \@ref(Box). If there's a clean version, 
+
+### Contributing to the lab data bank {-}
+
+### Contributing to the lab R package {-}

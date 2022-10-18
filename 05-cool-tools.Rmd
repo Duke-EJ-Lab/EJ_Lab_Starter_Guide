@@ -20,6 +20,7 @@
 
 * [bookdown](https://bookdown.org/yihui/bookdown/): lets you build websites and "books" really easily (how this site is built). 
 * [caret](https://topepo.github.io/caret/): streamlined model building (Classification And REgression Training) that handles data splitting, pre processing, feature selection, and model tuning and selection. 
+* [conflicted](https://github.com/r-lib/conflicted): alternate way of dealing with package naming conflicts. Great if you've ever gotten an error like `Unable to find an inherited method for function ‘select’ for signature ‘"data.frame"’` because you recently loaded a package that covers a function you commonly use. 
 * [datapasta](https://github.com/MilesMcBain/datapasta): if you ever copy and pasta data from an online table that you later use in your research you should be using this. It lets you copy and paste data directly into an R object, that can then be saved into your reproducible workflow. 
 * [exactextractr](https://rdrr.io/cran/exactextractr/): helps you use rasters and shapefiles to figure out the values in the raster within the shapefile area. Gives lots of control over how you extract - aggregating functions, weighting each raster cell, etc. 
 * [feather](https://www.rstudio.com/blog/feather/): a binary data format that is language agnostic with high write and read performance.
@@ -49,6 +50,7 @@
 
 * `file.path()`: a function that lets you reference paths without building the path manually (eg `user/anne/data/testing` vs `file.path("user", "anne", "data", "testing")`), which is great because it means your code won't break when it crosses to a different OS. 
 * `Hmisc::describe()`: sometimes more useful version of `summary` to peek into a dataset. It adds the number of distinct observations, as well as directly showing the highest and lowest observations.
+* `dplyr::complete()`: a function that can help making implicit NA's explicit.
 
 ## Basic packages to know about (Python) {-}
 
@@ -62,3 +64,9 @@
 * [BeautifulSoup](https://beautiful-soup-4.readthedocs.io/en/latest/): scraping
 
 ## Cool functions to know about (Python) {-}
+
+
+## Other random cool stuff {-}
+
+* [How do we think about EDA and pipelines? blog](https://kbroman.wordpress.com/2012/04/25/microarrays-suck/)
+* [personal R packages](https://www.jumpingrivers.com/blog/personal-r-package/)

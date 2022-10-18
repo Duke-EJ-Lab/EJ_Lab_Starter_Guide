@@ -10,6 +10,8 @@
 
 * leading 0's 
 
+* implicit NA's
+
 
 ## Shapefile Stumbling Blocks {-}
 
