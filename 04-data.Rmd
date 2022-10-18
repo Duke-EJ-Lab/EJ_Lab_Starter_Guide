@@ -1,53 +1,31 @@
-# Data {-}
+# Data Library {-}
 
-Lab data is stored in a few places, but should ***only*** be in Duke Box, or one of the lab VM's - not a personal computer, not dropbox, not a hard drive under the desk in Kay's office. 
+## Environmental Data {-}
 
-## Box {-}
+### RSEI {-}
 
-The EJ Lab Box has three main folders, `projects`, `clean`, and `raw`. 
+**What:**
 
-1) `raw` is effectively a read-only folder. Data is added relatively rarely and it's important when things are added to the raw folder to document well **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary). More details about the exact way to do this are in the \@ref(workflow).
+**Where:**
 
-2) `clean` holds processed data that you might want to directly pull into a project. For something to get added to clean a few conditions need to be met: the raw data is in the `raw` folder, and the code that cleans it is in the lab `cleaning` github. This is only for data that might be useful for someone else on a different lab project. A dataset to include might be: the average PM for every year 2000-2020 for each county in the contiguous US. A dataset not to include might be: a panel that includes 21 day rolling mean county level PM observation that you built to purpose for a model. 
+**Why:**
 
-3) `projects` is the folder that contains a folder for each active or archived project. While we'd recommend a structure that at least separates your `raw` data, `clean` data and any `docs` files you have (eg literature reviews, research updates, other notes to self, etc) - this is a space you can do whatever you please with. 
+### PM 2.5 {-}
 
+**Spatial Resolution + Coverage:** The PM 2.5 data that lives in the Box is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5.  The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you'll need to download their Global/Regional Estimates (V5.GL.02).
 
-Below is a minimal representation of what the Box structure looks like. 
+**Temporal Resolution + Coverage:** The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level. 
 
-```
-ejlab
- ├── projects
- │   ├── covid_housing_precarity
- │   ├── covid_rental_discrimination
- │   └── cafos_nc 
- ├── clean
- │	 ├── rsei
- │	 ├── polidata
- │	 └── pm25
- └── raw
-     ├── rsei
-     ├── polidata
-     └──pm25
-```
+**Formats:** The raw raster data lives in the Box `raw` folder. There is also some processed data in the `clean/pm25` folder, at state, county and tract level where each observation is a yearly average as aggregated over that spatial unit (using weighted average, weighting by the area of the grid cell covered by the spatial unit), only including the lower 48. 
 
-## VM's {-}
+**Source:** Information on the different products can be found [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/). We specifically have downloaded the 
 
-There are a few datasets that should only exist on **Duke owned machines** (the VM's) or (if they have even higher protections) that can only exist in the **protected research data network** (PRDN). Information on getting access to those spaces can be found in the onboarding section. This includes the original datasets, and ANY data that is created from it/combined with it/modeled using it, excluding simple tables that might be need to go in a publication. The datasets currently used in lab that these protections apply to are: 
-
-* InfoUSA
-* Corelogic
-
-## What data do we already have ready to go? {-}
+## Social Data {-}
 
 ### InfoUSA {-}
 
 ### Corelogic {-}
 
-### RSEI {-}
+## Other {-}
 
-### PM 2.5 {-}
-
-The PM 2.5 data that lives in the Dropbox is in a raster format, one of the finest resolution datasets built for PM 2.5. Information on the different products can be found [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/)
-
-### various boundary shapefiles {-}
+### US boundary shapefiles {-}
