@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Tools to know about | Duke EJ Lab</title>
+  <meta name="description" content="This is a resource for new, current, and graduated members of the Duke EJ Lab. It helps get you oriented to the norms of the lab (where do we store data?), the existing resources of the lab (we already have data on toxic spills clean and ready to use?!), and gives a space for everyone to contribute their own lessons learned and build institutional knowledge." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Tools to know about | Duke EJ Lab" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a resource for new, current, and graduated members of the Duke EJ Lab. It helps get you oriented to the norms of the lab (where do we store data?), the existing resources of the lab (we already have data on toxic spills clean and ready to use?!), and gives a space for everyone to contribute their own lessons learned and build institutional knowledge." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tools to know about | Duke EJ Lab" />
+  
+  <meta name="twitter:description" content="This is a resource for new, current, and graduated members of the Duke EJ Lab. It helps get you oriented to the norms of the lab (where do we store data?), the existing resources of the lab (we already have data on toxic spills clean and ready to use?!), and gives a space for everyone to contribute their own lessons learned and build institutional knowledge." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data-library.html"/>
+<link rel="next" href="general-stumbling-blocks.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#section" id="toc-section"></a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Goals</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="people.html"><a href="people.html"><i class="fa fa-check"></i>People</a>
+<ul>
+<li class="chapter" data-level="" data-path="people.html"><a href="people.html#alums"><i class="fa fa-check"></i>Alums</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i>Onboarding</a>
+<ul>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#code-organization"><i class="fa fa-check"></i>Code Organization</a>
+<ul>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#individual-code-organization"><i class="fa fa-check"></i>Individual Code Organization</a></li>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#lab-code-organization"><i class="fa fa-check"></i>Lab Code Organization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#data-storage"><i class="fa fa-check"></i>Data Storage</a>
+<ul>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#box"><i class="fa fa-check"></i>Box</a></li>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#vms"><i class="fa fa-check"></i>VM’s</a></li>
+</ul></li>
+<li><a href="onboarding.html#section-1" id="toc-section-1"></a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i>Workflow</a>
+<ul>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#starting-up-a-project"><i class="fa fa-check"></i>Starting up a Project</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#code-documentation"><i class="fa fa-check"></i>Code Documentation</a>
+<ul>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#commenting"><i class="fa fa-check"></i>Commenting</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#file-naming"><i class="fa fa-check"></i>File Naming</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#object-naming"><i class="fa fa-check"></i>Object naming</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#documenting-data"><i class="fa fa-check"></i>Documenting Data</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#closing-out-a-project"><i class="fa fa-check"></i>Closing out a Project</a>
+<ul>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-the-lab-data-bank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-the-lab-r-package"><i class="fa fa-check"></i>Contributing to the lab R package</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-this-lab-onboarding-doc"><i class="fa fa-check"></i>Contributing to (this!) lab onboarding doc</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html"><i class="fa fa-check"></i>Data Library</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#environmental-data"><i class="fa fa-check"></i>Environmental Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#rsei"><i class="fa fa-check"></i>RSEI</a></li>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#pm-2.5"><i class="fa fa-check"></i>PM 2.5</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#social-data"><i class="fa fa-check"></i>Social Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#infousa"><i class="fa fa-check"></i>InfoUSA</a></li>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#corelogic"><i class="fa fa-check"></i>Corelogic</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#other"><i class="fa fa-check"></i>Other</a>
+<ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#us-boundary-shapefiles"><i class="fa fa-check"></i>US boundary shapefiles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html"><i class="fa fa-check"></i>Tools to know about</a>
+<ul>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#basic-packages-to-know-about-r"><i class="fa fa-check"></i>Basic packages to know about (R)</a></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-packages-to-know-about-r"><i class="fa fa-check"></i>Cool packages to know about (R)</a>
+<ul>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#package"><i class="fa fa-check"></i>Our lab package</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-functions-to-know-about-r"><i class="fa fa-check"></i>Cool functions to know about (R)</a></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#basic-packages-to-know-about-python"><i class="fa fa-check"></i>Basic packages to know about (Python)</a></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-packages-to-know-about-python"><i class="fa fa-check"></i>Cool packages to know about (Python)</a></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-functions-to-know-about-python"><i class="fa fa-check"></i>Cool functions to know about (Python)</a></li>
+<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#other-random-cool-stuff"><i class="fa fa-check"></i>Other random cool stuff</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="general-stumbling-blocks.html"><a href="general-stumbling-blocks.html"><i class="fa fa-check"></i>General Stumbling Blocks</a>
+<ul>
+<li class="chapter" data-level="" data-path="general-stumbling-blocks.html"><a href="general-stumbling-blocks.html#theoretical-stumbling-blocks"><i class="fa fa-check"></i>Theoretical Stumbling Blocks</a></li>
+<li class="chapter" data-level="" data-path="general-stumbling-blocks.html"><a href="general-stumbling-blocks.html#data-cleaning-stumbling-blocks"><i class="fa fa-check"></i>Data Cleaning Stumbling Blocks</a></li>
+<li class="chapter" data-level="" data-path="general-stumbling-blocks.html"><a href="general-stumbling-blocks.html#shapefile-stumbling-blocks"><i class="fa fa-check"></i>Shapefile Stumbling Blocks</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Duke EJ Lab</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tools-to-know-about" class="section level1 unnumbered hasAnchor">
+<h1>Tools to know about<a href="tools-to-know-about.html#tools-to-know-about" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="basic-packages-to-know-about-r" class="section level2 unnumbered hasAnchor">
+<h2>Basic packages to know about (R)<a href="tools-to-know-about.html#basic-packages-to-know-about-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html">data.table</a>: hard to read, but faster on average data manipulation</li>
+<li><a href="https://cran.r-project.org/web/packages/raster/index.html">raster</a>: work with raster data</li>
+<li><a href="https://rmarkdown.rstudio.com/">rmarkdown</a>: the R notebook interface, useful for saving EDA with explanation or for reports, but generally not used for heavy lifting final code.</li>
+<li><a href="https://r-spatial.github.io/sf/">sf</a>: spatial data, more flexible</li>
+<li><a href="https://www.rdocumentation.org/packages/sp/versions/1.5-0">sp</a>: spatial data, more built in options</li>
+<li><a href="https://www.tidyverse.org/">tidyverse</a>
+<ul>
+<li><a href="https://dplyr.tidyverse.org/">dplyr</a>: “a grammar of data manipulation”</li>
+<li><a href="https://ggplot2.tidyverse.org/">ggplot2</a>: quick and easy graphics</li>
+<li><a href="https://lubridate.tidyverse.org/">lubridate</a>: easier date/time formats</li>
+<li><a href="https://readr.tidyverse.org/">readr</a>: fast and easy way to read flat files</li>
+<li><a href="https://stringr.tidyverse.org/">stringr</a>: common string manipulations</li>
+<li><a href="https://tidyr.tidyverse.org/">tidyr</a>: reshaping data</li>
+</ul></li>
+</ul>
+</div>
+<div id="cool-packages-to-know-about-r" class="section level2 unnumbered hasAnchor">
+<h2>Cool packages to know about (R)<a href="tools-to-know-about.html#cool-packages-to-know-about-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://bookdown.org/yihui/bookdown/">bookdown</a>: lets you build websites and “books” really easily (how this site is built).</li>
+<li><a href="https://topepo.github.io/caret/">caret</a>: streamlined model building (Classification And REgression Training) that handles data splitting, pre processing, feature selection, and model tuning and selection.</li>
+<li><a href="https://github.com/r-lib/conflicted">conflicted</a>: alternate way of dealing with package naming conflicts. Great if you’ve ever gotten an error like <code>Unable to find an inherited method for function ‘select’ for signature ‘"data.frame"’</code> because you recently loaded a package that covers a function you commonly use.</li>
+<li><a href="https://github.com/MilesMcBain/datapasta">datapasta</a>: if you ever copy and pasta data from an online table that you later use in your research you should be using this. It lets you copy and paste data directly into an R object, that can then be saved into your reproducible workflow.</li>
+<li><a href="https://rdrr.io/cran/exactextractr/">exactextractr</a>: helps you use rasters and shapefiles to figure out the values in the raster within the shapefile area. Gives lots of control over how you extract - aggregating functions, weighting each raster cell, etc.</li>
+<li><a href="https://www.rstudio.com/blog/feather/">feather</a>: a binary data format that is language agnostic with high write and read performance.</li>
+<li><a href="https://github.com/thomasp85/patchwork">patchwork</a>: lets you arrange several ggplot plots into table like configurations.</li>
+<li><a href="https://www.rdocumentation.org/packages/pbapply/versions/1.4-3/topics/pbapply">pbapply</a>: the classic lapply function, but provides a progress bar!</li>
+<li><a href="http://rstudio.github.io/profvis/">profvis</a>: gives you a graphical representation of how quickly each line of a block of code is running. A great tool when something is running slower than expected but you don’t really know where it’s going wrong.</li>
+<li><a href="https://github.com/ranger/ranger">ranger</a>: fast random forests!</li>
+<li><a href="https://rstudio.github.io/reticulate/">reticulate</a>: the R interface to Python.</li>
+<li><a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">roxygen</a>: critical for package development. Learn it by contributing to the lab package!</li>
+<li><a href="https://rvest.tidyverse.org/">rvest</a>: scrape the internet!</li>
+<li><a href="https://github.com/ggrothendieck/sqldf">sqldf</a>: another way to manipulate data in R. sometimes useful since it uses SQLite as the underlying database, so for large data it is usually much faster than straight R. Great for an initial read-in filter.</li>
+<li><a href="https://walker-data.com/tidycensus/">tidycensus</a>: work with Census data directly from your R code. You give it the variable titles and years you want and it pulls it from the Census API. Great for reproducibility!</li>
+<li><a href="https://juliasilge.github.io/tidytext/">tidytext</a>: text mining</li>
+<li><a href="https://github.com/karthik/wesanderson">wesanderson</a>: color palletes based on Wes Anderson’s movies, some of them make some really beautiful plots. (Personally I love <code>Zissou1</code>, <code>Darjeeling1</code> and <code>GrandBudapest1</code> -Anne)</li>
+<li><a href="https://github.com/data-cleaning/validate">validate</a>: great to do checks on your final panel before modeling, makes it easy to “check whether data lives up to expectations you have based on domain knowledge”. A great thing to build into a final code package - also helps people who come back to your code what to expect.</li>
+<li><a href="https://github.com/tidyverse/vroom">vroom</a>: frequently the fastest way to read data in to R. <code>readr</code> has a throughput of 44.02 MB/sec, while vroom reaches 1.23 GB/sec.</li>
+</ul>
+<div id="package" class="section level3 unnumbered hasAnchor">
+<h3>Our lab package<a href="tools-to-know-about.html#package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong><a href="https://github.com/Duke-EJ-Lab/lab.tools">Our lab package</a></strong>: an R package with a mismash of random helpful or fun functions. A sample of functions below. Anyone can add to the package, and it’s great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator).
+<ul>
+<li><code>detach_all_packages</code>: quickly wipes the packages loaded to your R environment, useful for ensuring reproducibility (since the packages you have loaded impact how things run!)</li>
+<li><code>beep_alert</code>: a function that tells you aloud that your code has finished running. Useful when you have things running just long enough that you want to go look at your email or something.</li>
+<li><code>merge_verbose</code>: wraps the base merge function, but spits out some info on your merge to the console.</li>
+<li>some extra ggplot themes</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="cool-functions-to-know-about-r" class="section level2 unnumbered hasAnchor">
+<h2>Cool functions to know about (R)<a href="tools-to-know-about.html#cool-functions-to-know-about-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><code>file.path()</code>: a function that lets you reference paths without building the path manually (eg <code>user/anne/data/testing</code> vs <code>file.path("user", "anne", "data", "testing")</code>), which is great because it means your code won’t break when it crosses to a different OS.</li>
+<li><code>Hmisc::describe()</code>: sometimes more useful version of <code>summary</code> to peek into a dataset. It adds the number of distinct observations, as well as directly showing the highest and lowest observations.</li>
+<li><code>dplyr::complete()</code>: a function that can help making implicit NA’s explicit.</li>
+<li><code>BAMMtools::getJenksBreaks()</code>: great for plotting, given a vector it returns the “Jenks” breaks for cloropleth maps (commonly used in many GIS systems). Basically just returns a list of numbers that you can pass to a mapping function that specify where color changes should happen.</li>
+</ul>
+</div>
+<div id="basic-packages-to-know-about-python" class="section level2 unnumbered hasAnchor">
+<h2>Basic packages to know about (Python)<a href="tools-to-know-about.html#basic-packages-to-know-about-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://numpy.org/">NumPy</a>: numerical computing, random number generation, etc</li>
+<li><a href="https://pandas.pydata.org/">Pandas</a>: flexible data structures, data wrangling and cleaning</li>
+<li><a href="https://matplotlib.org/">Matplotlib</a>: data visualization</li>
+<li><a href="https://scikit-learn.org/stable/">scikit-learn</a>: classification, regression, clustering, and some cleaning</li>
+</ul>
+</div>
+<div id="cool-packages-to-know-about-python" class="section level2 unnumbered hasAnchor">
+<h2>Cool packages to know about (Python)<a href="tools-to-know-about.html#cool-packages-to-know-about-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://beautiful-soup-4.readthedocs.io/en/latest/">BeautifulSoup</a>: scraping</li>
+</ul>
+</div>
+<div id="cool-functions-to-know-about-python" class="section level2 unnumbered hasAnchor">
+<h2>Cool functions to know about (Python)<a href="tools-to-know-about.html#cool-functions-to-know-about-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="other-random-cool-stuff" class="section level2 unnumbered hasAnchor">
+<h2>Other random cool stuff<a href="tools-to-know-about.html#other-random-cool-stuff" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><a href="https://kbroman.wordpress.com/2012/04/25/microarrays-suck/">How do we think about EDA and pipelines? blog</a></li>
+<li><a href="https://www.jumpingrivers.com/blog/personal-r-package/">personal R packages</a></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data-library.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="general-stumbling-blocks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-cool-tools.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-# Workflow {-}
+# Workflow {-#workflow}
 
 This workflow section will cover a lot of expectations in pretty high detail and may be slightly overwhelming. The first section covers the immediate steps that you need to know as you go out, so feel free to start there and come back to this over time. If you find anything unclear feel free to edit this in the [repository](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide).
 
@@ -6,27 +6,43 @@ This workflow section will cover a lot of expectations in pretty high detail and
 
 1) Make sure you have access to everything you need: Duke Box (talk to Kay) and the [Duke-EJ-Lab GitHub](https://github.com/Duke-EJ-Lab), the VM's (talk to Anne or Kay, may take a little while) if you are working with protected data or need lots of computational power; make sure you have all the software you need installed: [Github Desktop](https://desktop.github.com/), [R](https://cran.r-project.org/), and [RStudio](https://www.rstudio.com/products/rstudio/download/) or Python and your prefered IDE. We use Github Desktop in this walkthrough for ease, but you're welcome to use git in command line - whatever fits your needs! 
 
-2) **Create a github repo to store all your work in** that's within the Duke-EJ-Lab, based off the template. At the [`reproducible_project_template`](https://github.com/Duke-EJ-Lab/reproducible_project_template) page, hit the green "Use this template" button and choose a repository name that's descriptive of your project, separating words with "_". Set it to private while the work is in progress, so only other lab members can see the repository.
+2) **Create a GitHub repo to store all your work in** that's within the Duke-EJ-Lab, based off the template. At the [`reproducible_project_template`](https://github.com/Duke-EJ-Lab/reproducible_project_template) page, hit the green "Use this template" button and choose a repository name that's descriptive of your project, separating words with "_". Set it to private while the work is in progress, so only other lab members can see the repository. With GitHub 
 
 ```{r, echo = F, fig.align = "center", out.width="600px"}
 knitr::include_graphics(file.path("images", "github_reproducible_project_template.png"))
 ```
 
-3) **Create a data folder inside the `projects` folder of the Duke Box** with the same name as you chose for your GitHub repository. This is going to hold all the data that is unique to your project - that covers any data sources that aren't likely to be helpful for future projects or any of your processed data. It's recommended you follow something similar to the structure shown here, where you separate the `raw` and `clean` data within your project folder. 
+3) **Get a local version of your  GitHub repo**. In GitHub Desktop, find "File -> Clone Repository", which will bring up a list of repos you could have locally. Select the GitHub repo you just created (you may need to hit the refresh button if you *just* created it) and hit the blue "Clone" button at the bottom right. This will create a folder containing all the example structure files in your local `Documents/GitHub` folder, you can make any edits to the documents in those folders. 
+
+```{r, echo = F, fig.align = "center", out.width="350px"}
+knitr::include_graphics(file.path("images", "clone_repo.png"))
+```
+
+4) **Create a data folder inside the `projects` folder of the Duke Box** with the same name as you chose for your GitHub repository. This is going to hold all the data that is unique to your project - that covers any data sources that aren't likely to be helpful for future projects or any of your processed data. It's recommended you follow something similar to the structure shown here, where you separate the `raw` and `clean` data within your project folder. 
 
 ```{r, echo = F, fig.align = "center"}
 knitr::include_graphics(file.path("images", "box_structure.png"))
 ```
 
-4) **Add the data you need to your Box project folder.** Add documentation on that data to your Box. It's most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here's an example of of what the README might look like: a layout of the folder structure, followed by the **when/how/what** of each file. This is an iterative process! Every time you need new data, you'll come back to update the data documentation. 
+5) **Add the data you need to your Box project folder.** Add documentation on that data to your Box. It's most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here's an example of of what the README might look like: a layout of the folder structure, followed by the **when/how/what** of each file. This is an iterative process! Every time you need new data, you'll come back to update the data documentation. 
 
 ```{r, echo = F, fig.align = "center"}
 knitr::include_graphics(file.path("images", "data_documentation.png"))
 ```
 
-5) **Write some code.** Make sure to save even the exploratory data analysis (EDA) work you're doing - there's an `eda` folder in your GitHub repository that you can save out intermediate files in. 
+6) **Write some code.** Make sure to save even the exploratory data analysis (EDA) work you're doing - there's an `eda` folder in your GitHub repository that you can save out intermediate files in. 
 
-6) **Comment, document, and iterate!** Go back and forth between writing code and cleaning up your code + folder structure as you work through the project - it's inevitable you'll be trying different methods, different data sources, finding issues that makes you go through old work, and you want to keep the documentation as clean and minimal as you can throughout the process. Keep any analysis that informed your ultimate decisions and make sure it's commented, but drop code and data that's no longer relevant. 
+7) **Commit your code to GitHub.** Any time you make a change to your code, commit the change to the online version of the code. It's especially important to do this very often if you are collaborating with others. Good times to commit are: if you just solved a problem you've been working on, or if you're going to stop actively working on it (eg going to class, working on a paper). To commit, go to GitHub Desktop and add a commit message that explains what you're adding, then hit the blue "Commit" button on the bottom left. Once you've done that, hit the black "Push origin" button on the top right. 
+
+```{r, echo = F, fig.align = "center"}
+knitr::include_graphics(file.path("images", "github_commit.png"))
+```
+
+```{r, echo = F, fig.align = "center"}
+knitr::include_graphics(file.path("images", "github_push.png"))
+```
+
+8) **Comment, document, and iterate!** Go back and forth between writing code, committing it, and cleaning up your code + folder structure as you work through the project - it's inevitable you'll be trying different methods, different data sources, finding issues that makes you go through old work, and you want to keep the documentation as clean and minimal as you can throughout the process. Keep any analysis that informed your ultimate decisions and make sure it's commented, but drop code and data that's no longer relevant. 
 
 ## Code Documentation {-}
 
@@ -93,10 +109,35 @@ This is largely lifted from Hadley Wickham's [style guide](http://adv-r.had.co.n
 
 * Go through your code and make sure you're using it all, trim down whatever isn't part of the project anymore. EG are you still using the three different metrics you built? Are you using both versions of data on the same topic?
 
-* go through the data you used and decide if anything in your `ejlab/project` folder might actually be something that generalizes to other lab projects. If it does, move the raw data to the `ejlab/raw` folder (or a relevant subfolder) and document the **what**, **when**, **how** of the data \@ref(Box). If there's a clean version, 
+* go through the data you used and decide if anything in your `ejlab/project` folder might actually be something that generalizes to other lab projects. If it does, move the raw data to the `ejlab/raw` folder (or a relevant subfolder) and document the **what**, **when**, **how** of the data. If there's a clean version, 
 
 * hand off to a team mate and make sure they can run 
 
 ### Contributing to the lab data bank {-}
 
 ### Contributing to the lab R package {-}
+
+The lab R package is currently really minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you're writing a block of code that does a similar task over and over, consider if that's something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the [lab package section](#package) of this document!
+
+A step by step guide on how to contribute to the lab R package can be found in the [package repo](https://github.com/Duke-EJ-Lab/lab.tools) itself! 
+
+### Contributing to (this!) lab onboarding doc {-}
+
+1) Find the [GitHub repo](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide) that contains all the documents for this site, and get it locally. 
+
+2) Install the `bookdown` package. 
+
+```{r, eval = F}
+install.packages("bookdown")
+library(bookdown)
+```
+
+3) Make changes to whichever of the `Rmd` files you wanted to update. 
+
+4) The `Rmd` files aren't what's actually displayed on the site, it's actually the `html` files that are created from the `Rmd` files. To update the html files, use the `bookdown` package to render the book.
+
+```{r, eval = F}
+render_book()
+```
+
+5) Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will show up automatically. Beware it can take a little while for changes to actually show up. 

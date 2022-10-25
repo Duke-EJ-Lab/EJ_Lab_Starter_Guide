@@ -22,11 +22,11 @@ There are two communal code repositories to know about:
 
 Lab data is stored ***only*** be in Duke Box, or one of the lab VM's - not a personal computer, not dropbox, not a hard drive under the desk in Kay's office. 
 
-### Box {-}
+### Box {-#box}
 
 The EJ Lab Box has three main folders, `projects`, `clean`, and `raw`. 
 
-1) `raw` is effectively a read-only folder. Data is added relatively rarely and it's important when things are added to the raw folder to document well **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary). More details about the exact way to do this are in the \@ref(workflow).
+1) `raw` is effectively a read-only folder. Data is added relatively rarely and it's important when things are added to the raw folder to document well **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary). More details about the exact way to do this are in the [workflow section](#workflow).
 
 2) `clean` holds processed data that you might want to directly pull into a project. For something to get added to clean a few conditions need to be met: the raw data is in the `raw` folder, and the code that cleans it is in the lab `cleaning` github. This is only for data that might be useful for someone else on a different lab project. A dataset to include might be: the average PM for every year 2000-2020 for each county in the contiguous US. A dataset not to include might be: a panel that includes 21 day rolling mean county level PM observation that you built to purpose for a model. 
 

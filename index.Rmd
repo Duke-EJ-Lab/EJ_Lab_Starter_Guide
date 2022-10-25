@@ -16,3 +16,5 @@ github-repo: rstudio/bookdown-demo
 The EJ Lab is an interdisciplinary group that works across the Kenan Institute for Ethics and the Nicholas Institute for Energy, Environment & Sustainability to bring data tools and research justice principles to community building projects.
 
 The EJ Lab aims to provide community partners with access to data-driven research in the form that’s most useful to them - whether that be peer reviewed papers, policy briefs, or public use data tools. We are currently focused on examining environmental disparities in housing markets and neighborhoods, social and environmental determinants of health for communities, and the efficacy of environmental justice policy solutions.
+
+## Goals {-}
