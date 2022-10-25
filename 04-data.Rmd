@@ -12,13 +12,25 @@
 
 ### PM 2.5 {-}
 
-**Spatial Resolution + Coverage:** The PM 2.5 data that lives in the Box is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5.  The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you'll need to download their Global/Regional Estimates (V5.GL.02).
+#### raw/pm25/V4NA03 {-}
 
-**Temporal Resolution + Coverage:** The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level. 
+**Cleaned formats**: 
 
-**Formats:** The raw raster data lives in the Box `raw` folder. There is also some processed data in the `clean/pm25` folder, at state, county and tract level where each observation is a yearly average as aggregated over that spatial unit (using weighted average, weighting by the area of the grid cell covered by the spatial unit), only including the lower 48. 
+```{r, echo=F}
 
-**Source:** Information on the different products can be found [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/). We specifically have downloaded the 
+```
+
+**What**: 
+
+Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box `raw` folder is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5.  The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you'll need to download their Global/Regional Estimates (V5.GL.02).
+
+Temporal Resolution + Coverage: The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level. 
+
+Formats: The raw raster data lives in the Box `raw` folder. There is also some processed data in the `clean/pm25` folder, at state, county and tract level where each observation is a yearly average as aggregated over that spatial unit (using weighted average, weighting by the area of the grid cell covered by the spatial unit), only including the lower 48. 
+
+**Where:** Information on the different products can be found [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/). We have `V4.NA.03` data.
+
+**When:** Downloaded October 9th, 2022. 
 
 ## Social Data {-}
 

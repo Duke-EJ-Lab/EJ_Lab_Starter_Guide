@@ -2,7 +2,7 @@
 
 This workflow section will cover a lot of expectations in pretty high detail and may be slightly overwhelming. The first section covers the immediate steps that you need to know as you go out, so feel free to start there and come back to this over time. If you find anything unclear feel free to edit this in the [repository](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide).
 
-## Starting up a Project {-}
+## Starting up a Project {-#startup}
 
 1) Make sure you have access to everything you need: Duke Box (talk to Kay) and the [Duke-EJ-Lab GitHub](https://github.com/Duke-EJ-Lab), the VM's (talk to Anne or Kay, may take a little while) if you are working with protected data or need lots of computational power; make sure you have all the software you need installed: [Github Desktop](https://desktop.github.com/), [R](https://cran.r-project.org/), and [RStudio](https://www.rstudio.com/products/rstudio/download/) or Python and your prefered IDE. We use Github Desktop in this walkthrough for ease, but you're welcome to use git in command line - whatever fits your needs! 
 
@@ -24,7 +24,7 @@ knitr::include_graphics(file.path("images", "clone_repo.png"))
 knitr::include_graphics(file.path("images", "box_structure.png"))
 ```
 
-5) **Add the data you need to your Box project folder.** Add documentation on that data to your Box. It's most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here's an example of of what the README might look like: a layout of the folder structure, followed by the **when/how/what** of each file. This is an iterative process! Every time you need new data, you'll come back to update the data documentation. 
+5) **Add the data you need to your Box project folder.** Check the lab data bank to see if we have anything already cleaned that you can use - you can load anything useful directly from the `clean` folder, no need to copy it to your own folder. For data you add, add documentation on that data to your Box. It's most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here's an example of of what the README might look like: a layout of the folder structure, followed by the **when/how/what** of each file. This is an iterative process! Every time you need new data, you'll come back to update the data documentation. 
 
 ```{r, echo = F, fig.align = "center"}
 knitr::include_graphics(file.path("images", "data_documentation.png"))
@@ -105,23 +105,35 @@ This is largely lifted from Hadley Wickham's [style guide](http://adv-r.had.co.n
 
 ## Closing out a Project {-}
 
-* Go through your code and comment well
+There's lots of ways of re-organizing your code at the end of a project, and you should do whatever works best for you. That said, this is a system that works and feel free to use it. Make sure to read the sections on [contributing to the data bank](#databank) and [contributing to the lab package](#package), since those are things to do regardless of your re-organizing process.
 
-* Go through your code and make sure you're using it all, trim down whatever isn't part of the project anymore. EG are you still using the three different metrics you built? Are you using both versions of data on the same topic?
+1) Starting with your final model or panel, and figure out what data you actually ended up using. Frequently, throughout the research process we'll build variables multiple ways and try data from different sources as we build our understanding of what the data means. Once you have your final model and are heading towards writing up a report, you don't need to keep the legacy code and data. 
 
-* go through the data you used and decide if anything in your `ejlab/project` folder might actually be something that generalizes to other lab projects. If it does, move the raw data to the `ejlab/raw` folder (or a relevant subfolder) and document the **what**, **when**, **how** of the data. If there's a clean version, 
+2) Work through the data cleaning code, keeping in mind what is included in the final model. For every data cleaning/combining/munging file make sure that it's still a necessary step and comment the code with a mindset of 30,000 feet. Make sure each file:
 
-* hand off to a team mate and make sure they can run 
+    * Has a header that explains what the overall goal of the file is and how it fits in the project.
+    
+    * Is either short enough that it is only doing one thing, or is sectioned off so a reader can tell what steps are happening just by reading section headers. 
+  
+    * Has comments explaining any non-obvious functions.
+  
+    * Has comments explaining research choices. (think: why does it make sense to set the indicator variable to 0 if another variable is NA? not: why is important to account for PM2.5 when studying asthma outcomes)
 
-### Contributing to the lab data bank {-}
+3) Make sure every data file in your project folder is documented following **when/how/what**: **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Remove data that is no longer relevant to the project. 
 
-### Contributing to the lab R package {-}
+4) Now that you've gone through all steps of your code and have a good conceptual sense of what is there, think if anything might generalize to other lab projects. If you have functions that might be generally useful, move them to the `lab.tools` package, as described in the [package section](#package) and make sure your code is pulling the function from the package. If there's a really generalizable dataset that others might be able to use, move it to the lab data bank (ie the `clean` and `raw` folders of the Box, rather than your personal project folder). Data must be well documented, and the code to clean it must also be saved following the process described in the [databank section](#databank) below.
 
-The lab R package is currently really minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you're writing a block of code that does a similar task over and over, consider if that's something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the [lab package section](#package) of this document!
+5) You should have a project that can be run by anyone with access to your GitHub repo and the Duke Box folder. To make sure someone on another computer can use your code, check if there's someone in lab can try to re-run your code. It's common that issues come up (even when we're being really careful) so try to account for the fact that it will likely take a while to de-bug some issues, rather than just quickly hitting run on each file. Make sure the person can dedicate at least a few hours to it. 
+
+### Contributing to the lab data bank {-#databank}
+
+### Contributing to the lab R package {-#package}
+
+The lab R package is currently minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you're writing a block of code that does a similar task over and over, consider if that's something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the [lab package section](#package) of this document!
 
 A step by step guide on how to contribute to the lab R package can be found in the [package repo](https://github.com/Duke-EJ-Lab/lab.tools) itself! 
 
-### Contributing to (this!) lab onboarding doc {-}
+### Contributing to (this!) lab onboarding doc {-#guide}
 
 1) Find the [GitHub repo](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide) that contains all the documents for this site, and get it locally. 
 
@@ -134,10 +146,10 @@ library(bookdown)
 
 3) Make changes to whichever of the `Rmd` files you wanted to update. 
 
-4) The `Rmd` files aren't what's actually displayed on the site, it's actually the `html` files that are created from the `Rmd` files. To update the html files, use the `bookdown` package to render the book.
+4) The site displays `html` files that are created from the `Rmd` files, so you need to make sure the html files reflect your changes. Use the `bookdown` package to render the book. Make sure you're in the directory containing the `Rmd` files when you run this.
 
 ```{r, eval = F}
 render_book()
 ```
 
-5) Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will show up automatically. Beware it can take a little while for changes to actually show up. 
+5) Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will update automatically. Beware it can take a while for changes to show up. 
