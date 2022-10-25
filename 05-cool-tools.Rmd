@@ -51,6 +51,11 @@
 * `file.path()`: a function that lets you reference paths without building the path manually (eg `user/anne/data/testing` vs `file.path("user", "anne", "data", "testing")`), which is great because it means your code won't break when it crosses to a different OS. 
 * `Hmisc::describe()`: sometimes more useful version of `summary` to peek into a dataset. It adds the number of distinct observations, as well as directly showing the highest and lowest observations.
 * `dplyr::complete()`: a function that can help making implicit NA's explicit.
+* `BAMMtools::getJenksBreaks()`: great for plotting, given a vector it returns the "Jenks" breaks for cloropleth maps (commonly used in many GIS systems). Basically just returns a list of numbers that you can pass to a mapping function that specify where color changes should happen.
+
+
+
+
 
 ## Basic packages to know about (Python) {-}
 

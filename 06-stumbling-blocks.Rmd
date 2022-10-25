@@ -2,19 +2,30 @@
 
 ## Theoretical Stumbling Blocks {-}
 
-* Test/Train
+* Test/Train 
+  * temporal?
+  
+* Data Leakage generally
 
 ## Data Cleaning Stumbling Blocks {-}
 
+* fail early and often - build in explicit data validation w/ `validate::check_that`
+
 * Aggregating - what's the best function?
+  What are you trying to capture? Do you need to account for area? Do you need to account for population? Do you only care about aggregating over spaces that meet certain conditions? 
 
 * leading 0's 
 
 * implicit NA's
 
+* make sure to use census block group/tract/county FIPS codes for a correct + consistent year
+Codes change from year to year, so if you use the 2010 set in one part of your code and the 2020 set in another part of your code you'll drop data that you want to have, and add NA's that are "false". 
+
 
 ## Shapefile Stumbling Blocks {-}
 
 * Projections
+  If you have shapefiles in different projections, you may get unexpected (and incorrect) results when you extract or aggregate. 
 
 * Extracting accurately
+  Extraction functions can reach pretty different answers depending on their methods! Is the function you're using extracting only the pixel that represents the centroid of your shapfile? Is the function you're using extracting only pixels that your shapefile completely covers? Is your shapefile weighting by the area of the pixel that your shapefile covers?

@@ -1,61 +1,101 @@
 # Workflow {-}
 
-## Data Storage {-}
-
-Lab data is stored ***only*** be in Duke Box, or one of the lab VM's - not a personal computer, not dropbox, not a hard drive under the desk in Kay's office. 
-
-### Box {-}
-
-The EJ Lab Box has three main folders, `projects`, `clean`, and `raw`. 
-
-1) `raw` is effectively a read-only folder. Data is added relatively rarely and it's important when things are added to the raw folder to document well **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary). More details about the exact way to do this are in the \@ref(workflow).
-
-2) `clean` holds processed data that you might want to directly pull into a project. For something to get added to clean a few conditions need to be met: the raw data is in the `raw` folder, and the code that cleans it is in the lab `cleaning` github. This is only for data that might be useful for someone else on a different lab project. A dataset to include might be: the average PM for every year 2000-2020 for each county in the contiguous US. A dataset not to include might be: a panel that includes 21 day rolling mean county level PM observation that you built to purpose for a model. 
-
-3) `projects` is the folder that contains a folder for each active or archived project. While we'd recommend a structure that at least separates your `raw` data, `clean` data and any `docs` files you have (eg literature reviews, research updates, other notes to self, etc) - this is a space you can do whatever you please with. 
-
-
-Below is a minimal representation of what the Box structure looks like. 
-
-```
-ejlab
- ├── projects
- │   ├── covid_housing_precarity
- │   ├── covid_rental_discrimination
- │   └── cafos_nc 
- ├── clean
- │	 ├── rsei
- │	 ├── polidata
- │	 └── pm25
- └── raw
-     ├── rsei
-     ├── polidata
-     └──pm25
-```
-
-### VM's {-}
-
-There are a few datasets that should only exist on **Duke owned machines** (the VM's) or (if they have even higher protections) that can only exist in the **protected research data network** (PRDN). Information on getting access to those spaces can be found in the onboarding section. This includes the original datasets, and ANY data that is created from it/combined with it/modeled using it, excluding simple tables that might be need to go in a publication. The datasets currently used in lab that these protections apply to are: 
-
-* InfoUSA
-* Corelogic
-
-## Code Storage {-}
-
+This workflow section will cover a lot of expectations in pretty high detail and may be slightly overwhelming. The first section covers the immediate steps that you need to know as you go out, so feel free to start there and come back to this over time. If you find anything unclear feel free to edit this in the [repository](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide).
 
 ## Starting up a Project {-}
 
+1) Make sure you have access to everything you need: Duke Box (talk to Kay) and the [Duke-EJ-Lab GitHub](https://github.com/Duke-EJ-Lab), the VM's (talk to Anne or Kay, may take a little while) if you are working with protected data or need lots of computational power; make sure you have all the software you need installed: [Github Desktop](https://desktop.github.com/), [R](https://cran.r-project.org/), and [RStudio](https://www.rstudio.com/products/rstudio/download/) or Python and your prefered IDE. We use Github Desktop in this walkthrough for ease, but you're welcome to use git in command line - whatever fits your needs! 
 
-## Documenting a Project {-}
+2) **Create a github repo to store all your work in** that's within the Duke-EJ-Lab, based off the template. At the [`reproducible_project_template`](https://github.com/Duke-EJ-Lab/reproducible_project_template) page, hit the green "Use this template" button and choose a repository name that's descriptive of your project, separating words with "_". Set it to private while the work is in progress, so only other lab members can see the repository.
 
+```{r, echo = F, fig.align = "center", out.width="600px"}
+knitr::include_graphics(file.path("images", "github_reproducible_project_template.png"))
+```
+
+3) **Create a data folder inside the `projects` folder of the Duke Box** with the same name as you chose for your GitHub repository. This is going to hold all the data that is unique to your project - that covers any data sources that aren't likely to be helpful for future projects or any of your processed data. It's recommended you follow something similar to the structure shown here, where you separate the `raw` and `clean` data within your project folder. 
+
+```{r, echo = F, fig.align = "center"}
+knitr::include_graphics(file.path("images", "box_structure.png"))
+```
+
+4) **Add the data you need to your Box project folder.** Add documentation on that data to your Box. It's most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here's an example of of what the README might look like: a layout of the folder structure, followed by the **when/how/what** of each file. This is an iterative process! Every time you need new data, you'll come back to update the data documentation. 
+
+```{r, echo = F, fig.align = "center"}
+knitr::include_graphics(file.path("images", "data_documentation.png"))
+```
+
+5) **Write some code.** Make sure to save even the exploratory data analysis (EDA) work you're doing - there's an `eda` folder in your GitHub repository that you can save out intermediate files in. 
+
+6) **Comment, document, and iterate!** Go back and forth between writing code and cleaning up your code + folder structure as you work through the project - it's inevitable you'll be trying different methods, different data sources, finding issues that makes you go through old work, and you want to keep the documentation as clean and minimal as you can throughout the process. Keep any analysis that informed your ultimate decisions and make sure it's commented, but drop code and data that's no longer relevant. 
+
+## Code Documentation {-}
+
+### Commenting {-}
+
+Every code file should start with something that looks like this and contains:
+
+* the creator
+
+* who else is working/has worked on this file
+
+* when it was last edited
+
+* a one or two sentence description of what the file is trying to do 
+
+* what the output of the file is.
+
+```
+########################################################################################
+# Created by: Anne Driscoll
+# Other contributors: Chris Timmins, Kay Jowers
+# Last edited on: 8/31/22
+#
+# This file creates a cleaned dataset of all US flights that is used throughout 
+# the rest of the analysis in this project. 
+#
+# In the cleaned data each observation is an airport-year, and gives total number of 
+# flights, along with taxi time and several delay metrics. 
+########################################################################################
+```
+
+If the file is tackling more than one task at a time, it helps to break up the sections for readability, so that others can follow what the code is doing. That might look something like this:
+
+```
+# Load data --------------------------------------------------------------------
+
+# Filter data to only TX airports ----------------------------------------------
+
+# Plot number of flights over time ---------------------------------------------
+```
+
+Blocks of code should include more detailed commenting throughout, so that your collaborators can follow your code without spending too much time looking through the details of your code and the functions you call - reduce the mental load! The most important kinds of comments are those that explain why you're implementing something. A quick explanation of the universe of observations you are aiming for, a mention of the theoretical basis for why you're defining a variable a specific way, can be really useful so people understand the research decisions you're making. 
+
+### File Naming {-}
+
+Good examples would be `process_pm_data.R`, `identify_rural_homes.R`, or `create_figure_2.R`. Bad examples would be `CAFO2trylm.R`, `analysis.R`, or `cleaning up the obs from corelogic w rural designation.R`. 
+
+Most of the work we do will be a bunch of ordered files, and these should be numbered. Using the examples above, they should be named in order - `01_process_pm_data.R` and `02_create_figure_2.R` (assuming no files in between!). These can always be changed if you need to add steps in between!
+
+### Object naming {-}
+
+Variable and function names should be lowercase, and use an underscore to separate words. Try to be concise! Good examples would be `day_one` or `first_day`, bad examples would be `first_day_in_the_data` or `dotm1`.
+
+This is largely lifted from Hadley Wickham's [style guide](http://adv-r.had.co.nz/Style.html). Additional guidance can be found there, but these are the most important parts for us.
+
+
+## Documenting Data {-}
+
+ * Ever piece of data in the raw folder needs to have documented the **what**, **when**, **how** of the data.
 
 ## Closing out a Project {-}
 
 * Go through your code and comment well
 
-* hand off to a team mate and make sure they can run 
+* Go through your code and make sure you're using it all, trim down whatever isn't part of the project anymore. EG are you still using the three different metrics you built? Are you using both versions of data on the same topic?
 
 * go through the data you used and decide if anything in your `ejlab/project` folder might actually be something that generalizes to other lab projects. If it does, move the raw data to the `ejlab/raw` folder (or a relevant subfolder) and document the **what**, **when**, **how** of the data \@ref(Box). If there's a clean version, 
+
+* hand off to a team mate and make sure they can run 
 
 ### Contributing to the lab data bank {-}
 
