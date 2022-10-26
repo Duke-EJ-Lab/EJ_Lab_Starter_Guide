@@ -2,7 +2,7 @@
 
 ## Lab structure {-}
 
-The lab consists of two PIs: Chris Timmins (a professor in Econ) and Kay Jowers (the Director of the Just Environments program at the Nicholas Institute). There's currently a staff Analyst, Anne Driscoll. 
+The lab consists of two Principal Investigators (PIs): Chris Timmins (a professor in Econ) and Kay Jowers (the Director of the Just Environments program at the Nicholas Institute). There's currently a staff Analyst, Anne Driscoll. 
 
 Everybody meets once a week in person so we can all get a sense of what's going on with everyone in the lab. Meetings start with a rose/bud/thorn check-in, followed by a presentation by a lab member, a lit review by another lab member, and a factoid or figure share by a third lab member. 
 
@@ -24,7 +24,8 @@ Once you have access to the lab GitHub, you should be able to create repositorie
 
 There are two communal GitHub code repositories to know about: 
 
-* The [lab.tools](https://github.com/Duke-EJ-Lab/lab.tools) repo, which is an R package that everyone can add to and use in their code. You can find more information about how to contribute in the workflow section. It contains some helpful little functions like `detach_all_packages()` that lets you quickly wipe all the loaded functions from your environment - as well as some helpful analysis functions like `merge_verbose()` which wraps the normal merge function but outputs some info on the success of the merge or `simplify_and_combine_shapefiles()` which takes in a vector of file paths, simplifies the shapefiles and returns a master file, which is useful when data is served at a state level.
+* The [lab.tools](https://github.com/Duke-EJ-Lab/lab.tools) repo, which is an R package that everyone can add to and use in their code. You can find more information about how to contribute in the workflow section. It contains some helpful little functions like `detach_all_packages()` that lets you quickly wipe all the loaded functions from your environment - as well as some helpful analysis functions like `merge_verbose()` which wraps the normal merge function but outputs some info on the success of the merge or `simplify_and_combine_shapefiles()` which takes in a vector of file paths, simplifies the shapefiles and returns a master file, which is useful when data is served at a state level. 
+    * You can install the lab.tools package through first loading the `devtools` package, then running `install_github("Duke-EJ-Lab/lab.tools")`. Then just load as a normal library using `library(lab.tools)`.
 * The [general_cleaning](https://github.com/Duke-EJ-Lab/general_cleaning) repo, which serves to ensure we know the origin of all our communal lab data. There's more information about how to interact with the repo in the workflow section. 
 
 In addition to the code repositories, this [EJ_Lab_Starter_Guide](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide) repo is something you can access and update. Details on how to do that are in the [guide](#guide) section. 
@@ -73,4 +74,17 @@ There are a few datasets that should only exist on **Duke owned machines** (the 
 
 For projects that work with a protected dataset, most of the work will occur on the VM itself. This doesn't change the workflow very much as all the tools we work through (Box and GitHub Desktop) are available through the VM as well. 
 
+## Basics of GitHub
+
+Though it's much more complicated and has tons of more intricate use cases, at it's most basic we can think of git as similar to Box. A file exists in Box in the cloud, and sometimes also exists on your local computer. You can make changes on your computer, and that can change what's in the cloud (and therefore what's on your friend's computer). 
+
+Git is a little more manual than Box though! You have to manually let it know when to take action - and there are 3 actions you need to know about.
+
+A **commit** is basically like saving your progress. You're telling git to pay attention and create a save point of what's changed since you last committed. This is the building block of a repo, each commit should be a bite sized change in your work.
+
+A **push** is sending your commits to the cloud. Until you do this, your commits only exist on your computer, and if your colleagues look at your online GitHub repo nothing will have changed. 
+
+A **pull** is telling Git to check if anyone else has changed the online repo, and updating what's on your computer to match. 
+
+That's pretty much all you need to know to get started, and you'll see more about **commits** and **pushing** in the next section. From here on we're describing GitHub through the desktop app because that's the easiest way to learn about GitHub. 
 

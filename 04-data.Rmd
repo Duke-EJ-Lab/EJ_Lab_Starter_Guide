@@ -1,4 +1,4 @@
-# Data Library {-}
+# Data Library {-#data}
 
 ```{r, echo = F, results = "hide", warning = F, message = F}
 library(readr)
@@ -31,6 +31,8 @@ Temporal Resolution + Coverage:
 ## Environmental Data {-}
 
 ### RSEI {-}
+
+The Risk Screening Environmental Indicators (RSEI) is a measure of exposure to toxic chemicals from the EPA. The data helps "explore data on releases of toxic substances from industrial and federal facilities. RSEI incorporates information from the Toxics Release Inventory (TRI) on the amount of toxic chemicals released, together with factors such as the chemical’s fate and transport through the environment, each chemical’s relative toxicity, and potential human exposure." Using the repoted chemical releases combined with the fate and transport models lets us know where people are exposed to those chemical releases. 
 
 #### raw/rsei/chemical_data_rsei_v2310.csv {-}
 
