@@ -86,5 +86,5 @@ A **push** is sending your commits to the cloud. Until you do this, your commits
 
 A **pull** is telling Git to check if anyone else has changed the online repo, and updating what's on your computer to match. 
 
-That's pretty much all you need to know to get started, and you'll see more about **commits** and **pushing** in the next section. From here on we're describing GitHub through the desktop app because that's the easiest way to learn about GitHub. 
+That's pretty much all you need to know to get started, and you'll see more about **commits** and **pushing** in the next section. In our usage, we'll always talk about commiting then immediately pushing afterwards, since not doing so can cause complications. From here on we're describing GitHub through the desktop app because that's the easiest way to learn about GitHub. 
 

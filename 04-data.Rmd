@@ -2,8 +2,8 @@
 
 ```{r, echo = F, results = "hide", warning = F, message = F}
 library(readr)
-library(tidyverse)
 library(raster)
+library(tidyverse)
 data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", 
                       "Box-Box", "adhoc_ejlab", "ejlab")
 ```

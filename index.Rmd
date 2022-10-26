@@ -11,6 +11,11 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
+```{r, echo = F}
+library(formatR)
+knitr::opts_chunk$set(tidy.opts = list(width.cutoff = 60), tidy = TRUE)
+```
+
 #  {-}
 
 The EJ Lab is an interdisciplinary group that works across the Kenan Institute for Ethics and the Nicholas Institute for Energy, Environment & Sustainability to bring data tools and research justice principles to community building projects.
