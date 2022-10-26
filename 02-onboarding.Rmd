@@ -74,9 +74,11 @@ There are a few datasets that should only exist on **Duke owned machines** (the 
 
 For projects that work with a protected dataset, most of the work will occur on the VM itself. This doesn't change the workflow very much as all the tools we work through (Box and GitHub Desktop) are available through the VM as well. 
 
-## Basics of GitHub
+## Basics of GitHub {-}
 
 Though it's much more complicated and has tons of more intricate use cases, at it's most basic we can think of git as similar to Box. A file exists in Box in the cloud, and sometimes also exists on your local computer. You can make changes on your computer, and that can change what's in the cloud (and therefore what's on your friend's computer). 
+
+GitHub uses "repositories" (repos) as buckets that contain individual projects. 
 
 Git is a little more manual than Box though! You have to manually let it know when to take action - and there are 3 actions you need to know about.
 
