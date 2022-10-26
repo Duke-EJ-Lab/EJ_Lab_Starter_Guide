@@ -175,6 +175,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html"><i class="fa fa-check"></i>Data Library</a>
 <ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#documentation-format"><i class="fa fa-check"></i>Documentation format</a></li>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#environmental-data"><i class="fa fa-check"></i>Environmental Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#rsei"><i class="fa fa-check"></i>RSEI</a></li>
@@ -248,7 +249,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p><img src="images/box_structure.png" width="735" style="display: block; margin: auto;" /></p>
 <ol start="5" style="list-style-type: decimal">
-<li><strong>Add the data you need to your Box project folder.</strong> Add documentation on that data to your Box. It’s most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum <strong>when</strong> the data was downloaded, <strong>how</strong> to obtain the data (a link to download/an email for who to contact to get access), and <strong>what</strong> the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here’s an example of of what the README might look like: a layout of the folder structure, followed by the <strong>when/how/what</strong> of each file. This is an iterative process! Every time you need new data, you’ll come back to update the data documentation.</li>
+<li><strong>Add the data you need to your Box project folder.</strong> Check the lab data bank to see if we have anything already cleaned that you can use - you can load anything useful directly from the <code>clean</code> folder, no need to copy it to your own folder. For data you add, add documentation on that data to your Box. It’s most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum <strong>when</strong> the data was downloaded, <strong>how</strong> to obtain the data (a link to download/an email for who to contact to get access), and <strong>what</strong> the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here’s an example of of what the README might look like: a layout of the folder structure, followed by the <strong>when/how/what</strong> of each file. This is an iterative process! Every time you need new data, you’ll come back to update the data documentation.</li>
 </ol>
 <p><img src="images/data_documentation.png" width="963" style="display: block; margin: auto;" /></p>
 <ol start="6" style="list-style-type: decimal">
@@ -323,14 +324,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li><p>Make sure every data file in your project folder is documented following <strong>when/how/what</strong>: <strong>when</strong> the data was downloaded, <strong>how</strong> to obtain the data (a link to download/an email for who to contact to get access), and <strong>what</strong> the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Remove data that is no longer relevant to the project.</p></li>
 <li><p>Now that you’ve gone through all steps of your code and have a good conceptual sense of what is there, think if anything might generalize to other lab projects. If you have functions that might be generally useful, move them to the <code>lab.tools</code> package, as described in the <a href="workflow.html#package">package section</a> and make sure your code is pulling the function from the package. If there’s a really generalizable dataset that others might be able to use, move it to the lab data bank (ie the <code>clean</code> and <code>raw</code> folders of the Box, rather than your personal project folder). Data must be well documented, and the code to clean it must also be saved following the process described in the <a href="workflow.html#databank">databank section</a> below.</p></li>
-<li><p>You should have a</p></li>
+<li><p>You should have a project that can be run by anyone with access to your GitHub repo and the Duke Box folder. To make sure someone on another computer can use your code, check if there’s someone in lab can try to re-run your code. It’s common that issues come up (even when we’re being really careful) so try to account for the fact that it will likely take a while to de-bug some issues, rather than just quickly hitting run on each file. Make sure the person can dedicate at least a few hours to it.</p></li>
 </ol>
 <div id="databank" class="section level3 unnumbered hasAnchor">
 <h3>Contributing to the lab data bank<a href="workflow.html#databank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 <div id="package" class="section level3 unnumbered hasAnchor">
 <h3>Contributing to the lab R package<a href="workflow.html#package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The lab R package is currently really minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you’re writing a block of code that does a similar task over and over, consider if that’s something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the <a href="workflow.html#package">lab package section</a> of this document!</p>
+<p>The lab R package is currently minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you’re writing a block of code that does a similar task over and over, consider if that’s something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the <a href="workflow.html#package">lab package section</a> of this document!</p>
 <p>A step by step guide on how to contribute to the lab R package can be found in the <a href="https://github.com/Duke-EJ-Lab/lab.tools">package repo</a> itself!</p>
 </div>
 <div id="guide" class="section level3 unnumbered hasAnchor">
@@ -339,13 +340,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Find the <a href="https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide">GitHub repo</a> that contains all the documents for this site, and get it locally.</p></li>
 <li><p>Install the <code>bookdown</code> package.</p></li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="workflow.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb3-2"><a href="workflow.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bookdown)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="workflow.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
+<span id="cb4-2"><a href="workflow.html#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bookdown)</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li><p>Make changes to whichever of the <code>Rmd</code> files you wanted to update.</p></li>
 <li><p>The site displays <code>html</code> files that are created from the <code>Rmd</code> files, so you need to make sure the html files reflect your changes. Use the <code>bookdown</code> package to render the book. Make sure you’re in the directory containing the <code>Rmd</code> files when you run this.</p></li>
 </ol>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="workflow.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">render_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="workflow.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">render_book</span>()</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will update automatically. Beware it can take a while for changes to show up.</li>
 </ol>

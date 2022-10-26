@@ -144,6 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i>Onboarding</a>
 <ul>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#lab-structure"><i class="fa fa-check"></i>Lab structure</a></li>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#code-organization"><i class="fa fa-check"></i>Code Organization</a>
 <ul>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#individual-code-organization"><i class="fa fa-check"></i>Individual Code Organization</a></li>
@@ -154,11 +155,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#box"><i class="fa fa-check"></i>Box</a></li>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#vms"><i class="fa fa-check"></i>VM’s</a></li>
 </ul></li>
-<li><a href="onboarding.html#section-1" id="toc-section-1"></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i>Workflow</a>
 <ul>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#starting-up-a-project"><i class="fa fa-check"></i>Starting up a Project</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#startup"><i class="fa fa-check"></i>Starting up a Project</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#code-documentation"><i class="fa fa-check"></i>Code Documentation</a>
 <ul>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#commenting"><i class="fa fa-check"></i>Commenting</a></li>
@@ -168,13 +168,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#documenting-data"><i class="fa fa-check"></i>Documenting Data</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#closing-out-a-project"><i class="fa fa-check"></i>Closing out a Project</a>
 <ul>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-the-lab-data-bank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-the-lab-r-package"><i class="fa fa-check"></i>Contributing to the lab R package</a></li>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-this-lab-onboarding-doc"><i class="fa fa-check"></i>Contributing to (this!) lab onboarding doc</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#databank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#package"><i class="fa fa-check"></i>Contributing to the lab R package</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#guide"><i class="fa fa-check"></i>Contributing to (this!) lab onboarding doc</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html"><i class="fa fa-check"></i>Data Library</a>
 <ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#documentation-format"><i class="fa fa-check"></i>Documentation format</a></li>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#environmental-data"><i class="fa fa-check"></i>Environmental Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#rsei"><i class="fa fa-check"></i>RSEI</a></li>
@@ -195,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#basic-packages-to-know-about-r"><i class="fa fa-check"></i>Basic packages to know about (R)</a></li>
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-packages-to-know-about-r"><i class="fa fa-check"></i>Cool packages to know about (R)</a>
 <ul>
-<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#package"><i class="fa fa-check"></i>Our lab package</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#package"><i class="fa fa-check"></i>Our lab package</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-functions-to-know-about-r"><i class="fa fa-check"></i>Cool functions to know about (R)</a></li>
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#basic-packages-to-know-about-python"><i class="fa fa-check"></i>Basic packages to know about (Python)</a></li>
@@ -274,7 +275,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://github.com/tidyverse/vroom">vroom</a>: frequently the fastest way to read data in to R. <code>readr</code> has a throughput of 44.02 MB/sec, while vroom reaches 1.23 GB/sec.</li>
 </ul>
 <div id="package" class="section level3 unnumbered hasAnchor">
-<h3>Our lab package<a href="tools-to-know-about.html#package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Our lab package<a href="workflow.html#package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong><a href="https://github.com/Duke-EJ-Lab/lab.tools">Our lab package</a></strong>: an R package with a mismash of random helpful or fun functions. A sample of functions below. Anyone can add to the package, and it’s great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator).
 <ul>

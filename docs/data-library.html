@@ -144,6 +144,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html"><i class="fa fa-check"></i>Onboarding</a>
 <ul>
+<li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#lab-structure"><i class="fa fa-check"></i>Lab structure</a></li>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#code-organization"><i class="fa fa-check"></i>Code Organization</a>
 <ul>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#individual-code-organization"><i class="fa fa-check"></i>Individual Code Organization</a></li>
@@ -154,11 +155,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#box"><i class="fa fa-check"></i>Box</a></li>
 <li class="chapter" data-level="" data-path="onboarding.html"><a href="onboarding.html#vms"><i class="fa fa-check"></i>VM’s</a></li>
 </ul></li>
-<li><a href="onboarding.html#section-1" id="toc-section-1"></a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i>Workflow</a>
 <ul>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#starting-up-a-project"><i class="fa fa-check"></i>Starting up a Project</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#startup"><i class="fa fa-check"></i>Starting up a Project</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#code-documentation"><i class="fa fa-check"></i>Code Documentation</a>
 <ul>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#commenting"><i class="fa fa-check"></i>Commenting</a></li>
@@ -168,13 +168,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#documenting-data"><i class="fa fa-check"></i>Documenting Data</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#closing-out-a-project"><i class="fa fa-check"></i>Closing out a Project</a>
 <ul>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-the-lab-data-bank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-the-lab-r-package"><i class="fa fa-check"></i>Contributing to the lab R package</a></li>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contributing-to-this-lab-onboarding-doc"><i class="fa fa-check"></i>Contributing to (this!) lab onboarding doc</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#databank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#package"><i class="fa fa-check"></i>Contributing to the lab R package</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#guide"><i class="fa fa-check"></i>Contributing to (this!) lab onboarding doc</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html"><i class="fa fa-check"></i>Data Library</a>
 <ul>
+<li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#documentation-format"><i class="fa fa-check"></i>Documentation format</a></li>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#environmental-data"><i class="fa fa-check"></i>Environmental Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="data-library.html"><a href="data-library.html#rsei"><i class="fa fa-check"></i>RSEI</a></li>
@@ -195,7 +196,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#basic-packages-to-know-about-r"><i class="fa fa-check"></i>Basic packages to know about (R)</a></li>
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-packages-to-know-about-r"><i class="fa fa-check"></i>Cool packages to know about (R)</a>
 <ul>
-<li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#package"><i class="fa fa-check"></i>Our lab package</a></li>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#package"><i class="fa fa-check"></i>Our lab package</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#cool-functions-to-know-about-r"><i class="fa fa-check"></i>Cool functions to know about (R)</a></li>
 <li class="chapter" data-level="" data-path="tools-to-know-about.html"><a href="tools-to-know-about.html#basic-packages-to-know-about-python"><i class="fa fa-check"></i>Basic packages to know about (Python)</a></li>
@@ -231,20 +232,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="data-library" class="section level1 unnumbered hasAnchor">
 <h1>Data Library<a href="data-library.html#data-library" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="documentation-format" class="section level2 unnumbered hasAnchor">
+<h2>Documentation format<a href="data-library.html#documentation-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Cleaned formats</strong>:</p>
+<p><strong>What</strong>:</p>
+<p>Format:</p>
+<p>Spatial Resolution + Coverage:</p>
+<p>Temporal Resolution + Coverage:</p>
+<p><strong>Where</strong>:</p>
+<p><strong>When</strong>:</p>
+</div>
 <div id="environmental-data" class="section level2 unnumbered hasAnchor">
 <h2>Environmental Data<a href="data-library.html#environmental-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="rsei" class="section level3 unnumbered hasAnchor">
 <h3>RSEI<a href="data-library.html#rsei" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What:</strong></p>
-<p><strong>Where:</strong></p>
-<p><strong>Why:</strong></p>
+<div id="rawrseichemical_data_rsei_v2310.csv" class="section level4 unnumbered hasAnchor">
+<h4>raw/rsei/chemical_data_rsei_v2310.csv<a href="data-library.html#rawrseichemical_data_rsei_v2310.csv" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cleaned formats</strong>: NA</p>
+<p><strong>What</strong>: “The chemical table contains data [on which are] chemicals reported to TRI, including toxicity, physico-chemical properties, and flag fields to facilitate user selections. The chemical table is also available in EasyRSEI.” <a href="https://www.epa.gov/rsei/rsei-data-dictionary-chemical-data">Data dictionary</a></p>
+<p><strong>Where</strong>: <a href="https://www.epa.gov/system/files/other-files/2022-02/chemical_data_rsei_v2310.csv">Download</a></p>
+<p><strong>When</strong>: 09/26/22</p>
+</div>
+<div id="rawrseifacility_data_rsei_v2310.csv" class="section level4 unnumbered hasAnchor">
+<h4>raw/rsei/facility_data_rsei_v2310.csv<a href="data-library.html#rawrseifacility_data_rsei_v2310.csv" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cleaned formats</strong>: NA</p>
+<p><strong>What</strong>: “The facility table contains data for reporting facilities, including location, stack parameters and discharge reach, and is also available in EasyRSEI.” <a href="https://www.epa.gov/rsei/rsei-data-dictionary-facility-data">Data dictionary</a></p>
+<p><strong>Where</strong>: <a href="https://www.epa.gov/system/files/other-files/2022-02/facility_data_rsei_v2310.csv">Download</a></p>
+<p><strong>When</strong>: 09/26/22</p>
+</div>
+<div id="rawrseiblockgroup" class="section level4 unnumbered hasAnchor">
+<h4>raw/rsei/blockgroup<a href="data-library.html#rawrseiblockgroup" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cleaned formats</strong>: Processed versions of the RSEI data exist at the blockgroup, tract, and county levels. Because of reporting requirements, if you’re using RSEI in any timeseries you need to drop certain observations so that there aren’t huge jumps in years where reporting requirements change - currently data is only processed for the consistent set of chemicals that exists starting in 2011. There is code in the <code>general_cleaning</code> GitHub that would allow you to clean for other year sets in case your year is prior to 2011.</p>
+<p>Blockgroup data:</p>
+<pre><code>##          geoid  toxconc
+## 1 010010201001 421.9514
+## 2 010010201002 336.7555
+## 3 010010202001 382.7406
+## 4 010010202002 506.1840
+## 5 010010203001 430.1625
+## 6 010010203002 568.2655</code></pre>
+<p>Tract data:</p>
+<pre><code>##         geoid  toxconc
+## 1 01001020100 373.7711
+## 2 01001020200 430.2520
+## 3 01001020300 468.3784
+## 4 01001020400 506.8952
+## 5 01001020500 525.0578
+## 6 01001020600 925.0146</code></pre>
+<p>County data:</p>
+<pre><code>##   geoid   toxconc
+## 1 01001  361.0561
+## 2 01003 5585.0642
+## 3 01005  154.2646
+## 4 01007  262.4001
+## 5 01009 5077.8284
+## 6 01011  243.6445</code></pre>
+<p><strong>What</strong>:</p>
+<p>Format: csv. Each observation in the data is a spill of a specific chemical in a specific blockgroup, with accompanying information on the part of the spill relevant to the blockgroup. Important to consider that each row is NOT the entirety of a spill, NOT the entirety of the toxicity in the blockgroup and NOT the entirety of the impact of a facility, though you can aggregate to investigate spills, blockgroups or facilities. <a href="https://www.epa.gov/system/files/documents/2022-07/rsei-documentation-geographic-microdata-july-2022.pdf">This documentation</a> is helpful in thinking through what the data is and what is an appropriate interpretation.</p>
+<p>Spatial Resolution + Coverage: Each observation is the impact at the blockgroup level, for all US blockgroups.</p>
+<p>Temporal Resolution + Coverage: Each file is named <code>censusmicroblockgroup2020_[YYYY].csv</code>, where the YYYY indicates the year of coverage. It can only be interpreted at the year level, there’s no way to break up further temporally.</p>
+<p><strong>Where:</strong> <a href="http://abt-rsei.s3-website-us-east-1.amazonaws.com/?prefix=microdata2020/census_full/">Download</a></p>
+<p><strong>When:</strong> Downloaded 10/9/2022.</p>
+</div>
 </div>
 <div id="pm-2.5" class="section level3 unnumbered hasAnchor">
 <h3>PM 2.5<a href="data-library.html#pm-2.5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Spatial Resolution + Coverage:</strong> The PM 2.5 data that lives in the Box is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5. The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you’ll need to download their Global/Regional Estimates (V5.GL.02).</p>
-<p><strong>Temporal Resolution + Coverage:</strong> The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level.</p>
-<p><strong>Formats:</strong> The raw raster data lives in the Box <code>raw</code> folder. There is also some processed data in the <code>clean/pm25</code> folder, at state, county and tract level where each observation is a yearly average as aggregated over that spatial unit (using weighted average, weighting by the area of the grid cell covered by the spatial unit), only including the lower 48.</p>
-<p><strong>Source:</strong> Information on the different products can be found <a href="https://sites.wustl.edu/acag/datasets/surface-pm2-5/">here</a>. We specifically have downloaded the</p>
+<div id="rawpm25v4na03" class="section level4 unnumbered hasAnchor">
+<h4>raw/pm25/V4NA03<a href="data-library.html#rawpm25v4na03" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cleaned formats</strong>:</p>
+<p><strong>What</strong>:</p>
+<p>Format: raster
+<img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p>Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box <code>raw</code> folder is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5. The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you’ll need to download their Global/Regional Estimates (V5.GL.02).</p>
+<p>Temporal Resolution + Coverage: The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level.</p>
+<p><strong>Where:</strong> Information on the different products can be found <a href="https://sites.wustl.edu/acag/datasets/surface-pm2-5/">here</a>. We have <code>V4.NA.03</code> data.</p>
+<p><strong>When:</strong> Downloaded 10/9/2022.</p>
+</div>
 </div>
 </div>
 <div id="social-data" class="section level2 unnumbered hasAnchor">

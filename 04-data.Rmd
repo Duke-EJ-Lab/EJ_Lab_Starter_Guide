@@ -1,14 +1,94 @@
 # Data Library {-}
 
+```{r, echo = F, results = "hide", warning = F, message = F}
+library(readr)
+library(tidyverse)
+library(raster)
+data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", 
+                      "Box-Box", "adhoc_ejlab", "ejlab")
+```
+
+## Documentation format {-}
+
+**Cleaned formats**: 
+
+```{r, echo = F}
+
+```
+
+**What**:
+
+Format:
+
+Spatial Resolution + Coverage:
+
+Temporal Resolution + Coverage:
+
+**Where**:
+
+**When**: 
+
 ## Environmental Data {-}
 
 ### RSEI {-}
 
-**What:**
+#### raw/rsei/chemical_data_rsei_v2310.csv {-}
 
-**Where:**
+**Cleaned formats**: NA
 
-**Why:**
+**What**: "The chemical table contains data [on which are] chemicals reported to TRI, including toxicity, physico-chemical properties, and flag fields to facilitate user selections. The chemical table is also available in EasyRSEI." [Data dictionary](https://www.epa.gov/rsei/rsei-data-dictionary-chemical-data)
+
+**Where**: [Download](https://www.epa.gov/system/files/other-files/2022-02/chemical_data_rsei_v2310.csv)
+
+**When**: 09/26/22
+
+#### raw/rsei/facility_data_rsei_v2310.csv {-}
+
+**Cleaned formats**: NA
+
+**What**: "The facility table contains data for reporting facilities, including location, stack parameters and discharge reach, and is also available in EasyRSEI. " [Data dictionary](https://www.epa.gov/rsei/rsei-data-dictionary-facility-data)
+
+**Where**: [Download](https://www.epa.gov/system/files/other-files/2022-02/facility_data_rsei_v2310.csv)
+
+**When**: 09/26/22
+
+#### raw/rsei/blockgroup {-}
+
+**Cleaned formats**: Processed versions of the RSEI data exist at the blockgroup, tract, and county levels. Because of reporting requirements, if you're using RSEI in any timeseries you need to drop certain observations so that there aren't huge jumps in years where reporting requirements change - currently data is only processed for the consistent set of chemicals that exists starting in 2011. There is code in the `general_cleaning` GitHub that would allow you to clean for other year sets in case your year is prior to 2011.
+
+Blockgroup data: 
+```{r, echo=F, message=F}
+rsei_blockgroup = read_csv(file.path(data_path, "clean", "rsei", "blockgroup",
+                                     "RSEI_blockgroup_year2011_consistent2011_lower48.csv"))
+head(rsei_blockgroup %>% as.data.frame())
+```
+
+Tract data:
+```{r, echo=F, message=F}
+rsei_tract = read_csv(file.path(data_path, "clean", "rsei", "tract",
+                                 "RSEI_tract_year2011_consistent2011_lower48.csv"))
+head(rsei_tract %>% as.data.frame())
+```
+
+County data:
+```{r, echo=F, message=F}
+rsei_county = read_csv(file.path(data_path, "clean", "rsei", "county",
+                                 "RSEI_county_year2011_consistent2011_lower48.csv"))
+head(rsei_county %>% as.data.frame())
+
+```
+
+**What**: 
+
+Format: csv. Each observation in the data is a spill of a specific chemical in a specific blockgroup, with accompanying information on the part of the spill relevant to the blockgroup. Important to consider that each row is NOT the entirety of a spill, NOT the entirety of the toxicity in the blockgroup and NOT the entirety of the impact of a facility, though you can aggregate to investigate spills, blockgroups or facilities. [This documentation](https://www.epa.gov/system/files/documents/2022-07/rsei-documentation-geographic-microdata-july-2022.pdf) is helpful in thinking through what the data is and what is an appropriate interpretation. 
+
+Spatial Resolution + Coverage: Each observation is the impact at the blockgroup level, for all US blockgroups. 
+
+Temporal Resolution + Coverage: Each file is named `censusmicroblockgroup2020_[YYYY].csv`, where the YYYY indicates the year of coverage. It can only be interpreted at the year level, there's no way to break up further temporally. 
+
+**Where:** [Download](http://abt-rsei.s3-website-us-east-1.amazonaws.com/?prefix=microdata2020/census_full/)
+
+**When:** Downloaded 10/9/2022. 
 
 ### PM 2.5 {-}
 
@@ -16,21 +96,27 @@
 
 **Cleaned formats**: 
 
-```{r, echo=F}
+```{r, echo = F}
 
 ```
 
 **What**: 
 
+Format: raster
+```{r, echo = F, message = F}
+raw_pm = raster(file.path(data_path, "raw", "pm25", "V4NA03", 
+                          "V4NA03_PM25_NA_200001_200012-RH35-NoNegs.asc", 
+                          "V4NA03_PM25_NA_200001_200012-RH35-NoNegs.asc"))
+plot(raw_pm)
+```
+
 Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box `raw` folder is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5.  The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you'll need to download their Global/Regional Estimates (V5.GL.02).
 
 Temporal Resolution + Coverage: The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level. 
 
-Formats: The raw raster data lives in the Box `raw` folder. There is also some processed data in the `clean/pm25` folder, at state, county and tract level where each observation is a yearly average as aggregated over that spatial unit (using weighted average, weighting by the area of the grid cell covered by the spatial unit), only including the lower 48. 
-
 **Where:** Information on the different products can be found [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/). We have `V4.NA.03` data.
 
-**When:** Downloaded October 9th, 2022. 
+**When:** Downloaded 10/9/2022. 
 
 ## Social Data {-}
 
