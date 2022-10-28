@@ -332,24 +332,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Contributing to the lab data bank<a href="workflow.html#databank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you have a dataset that’s of interest for the rest of the lab and you want to add it to the data bank there’s only a few steps to follow!</p>
 <ol style="list-style-type: decimal">
-<li>Write the documentation for the raw data following the following format. Add it to the <a href="data.html#data">data</a> section of this document, making sure to follow the instructions in the <a href="workflow.html#guide">contributing to the guide</a> section.</li>
-</ol>
-<pre><code>#### path/to/data {-}
-
-**Cleaned formats**: This is a great place to load in the data and print out the first few rows so people can get a sense of what the data shows. Include a description of what an observation is. 
-
-**What**: What&#39;s the meaning of the data? What does it measure? Are there any known issues or things to be aware of if you&#39;re going to use it?
-
-Format: csv? raster? shapefile? excel? 
-
-Spatial Resolution + Coverage: What geographic region does it cover and what&#39;s the geographic unit that a row represents? blockgroup? city? the entire country? a 0.01° section?
-
-Temporal Resolution + Coverage: What time does the data cover? Is it a yearly average? daily? Average over 2006-2020?
-
-**Where**: A link to where the data is sourced. The data in the raw folder should be directly downloadable from where you link to, with no changes to it. If the data isn&#39;t publicly available, give info of who you reached out to and the exact format they specified upon giving it to you. Be as precise as you can!
-
-**When**: When did you download the data? This is important in case a new release comes out. </code></pre>
-<ol start="2" style="list-style-type: decimal">
+<li><p>Write the documentation for the raw data following the following format. Add it to the <a href="data.html#data">data</a> section of this document, making sure to follow the instructions in the <a href="workflow.html#guide">contributing to the guide</a> section.</p>
+<ul>
+<li><p><code>#### path/to/data {-}</code></p></li>
+<li><p><strong>Cleaned formats</strong>: This is a great place to load in the data and print out the first few rows so people can get a sense of what the data shows. Include a description of what an observation is.</p></li>
+<li><p><strong>What</strong>: What’s the meaning of the data? What does it measure? Are there any known issues or things to be aware of if you’re going to use it?</p>
+<ul>
+<li><p>Format: csv? raster? shapefile? excel?</p></li>
+<li><p>Spatial Resolution + Coverage: What geographic region does it cover and what’s the geographic unit that a row represents? blockgroup? city? the entire country? a 0.01° section?</p></li>
+<li><p>Temporal Resolution + Coverage: What time does the data cover? Is it a yearly average? daily? Average over 2006-2020?</p></li>
+</ul></li>
+<li><p><strong>Where</strong>: A link to where the data is sourced. The data in the raw folder should be directly downloadable from where you link to, with no changes to it. If the data isn’t publicly available, give info of who you reached out to and the exact format they specified upon giving it to you. Be as precise as you can!</p></li>
+<li><p><strong>When</strong>: When did you download the data? This is important in case a new release comes out.</p></li>
+</ul></li>
 <li><p>Once the data documentation is all there, you can move the raw file to the Box.</p></li>
 <li><p>Clean up the code you used to create the “clean” version of the data. Make sure to:</p>
 <ul>
@@ -372,13 +367,13 @@ Temporal Resolution + Coverage: What time does the data cover? Is it a yearly av
 <li><p>Find the <a href="https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide">GitHub repo</a> that contains all the documents for this site, and get it locally.</p></li>
 <li><p>Install the <code>bookdown</code> package, as well as the packages used in the book (<code>formatR</code>, <code>readr</code>, <code>raster</code>, and <code>tidyverse</code>)</p></li>
 </ol>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="workflow.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb5-2"><a href="workflow.html#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bookdown)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="workflow.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
+<span id="cb3-2"><a href="workflow.html#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(bookdown)</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li><p>Make changes to whichever of the <code>Rmd</code> files you wanted to update.</p></li>
 <li><p>The site displays <code>html</code> files that are created from the <code>Rmd</code> files, so you need to make sure the html files reflect your changes. Use the <code>bookdown</code> package to render the book. Make sure you’re in the directory containing the <code>Rmd</code> files when you run this.</p></li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="workflow.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">render_book</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="workflow.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">render_book</span>()</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will update automatically. Beware it can take a while for changes to show up.</li>
 </ol>

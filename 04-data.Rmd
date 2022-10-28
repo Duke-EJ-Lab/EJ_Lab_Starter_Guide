@@ -56,7 +56,7 @@ The Risk Screening Environmental Indicators (RSEI) is a measure of exposure to t
 
 #### raw/rsei/blockgroup {-}
 
-**Cleaned formats**: Processed versions of the RSEI data exist at the blockgroup, tract, and county levels. Because of reporting requirements, if you're using RSEI in any timeseries you need to drop certain observations so that there aren't huge jumps in years where reporting requirements change - currently data is only processed for the consistent set of chemicals that exists starting in 2011. There is code in the `general_cleaning` GitHub that would allow you to clean for other year sets in case your year is prior to 2011.
+**Cleaned formats**: Processed versions of the RSEI data exist at the blockgroup, tract, and county levels. Because of reporting requirements, if you're using RSEI in any timeseries you need to drop certain observations so that there aren't huge jumps in years where reporting requirements change - currently data is only processed for the consistent set of chemicals that exists starting in 2011. There is code in the `general_cleaning` GitHub that would allow you to clean for other year sets in case your year is prior to 2011. The data follows the naming convention `RSEI_[geographic level]_year[AAAA]_consistent[BBBB]_lower48.csv`, where `geographic level` is either "blockgroup", "tract" or "county", `AAAA` is the four digit year for which the RSEI data is pulled, and `BBBB` is the four digit year that the chemicals are consistent for. `BBBB` should never be a year that came after `AAAA`. Lower 48 indicates the data does not include HI + AK or territories. 
 
 Blockgroup data: 
 ```{r, echo=F, message=F}
@@ -96,10 +96,13 @@ Temporal Resolution + Coverage: Each file is named `censusmicroblockgroup2020_[Y
 
 #### raw/pm25/V4NA03 {-}
 
-**Cleaned formats**: 
+**Cleaned formats**: Processed versions of the PM2.5 data exists at the county level for 2000-2018. Currently, there is only a version for 2010 county boundaries. There is code in the `general_cleaning` GitHub that could be adapted to clean for other shapefiles. The data follows the naming convention `pm[AAAA]_county[BBBB].csv`, where `AAAA` is the four digit year for which the pm data is pulled, and `BBBB` is the four digit year that the county boundaries are from. All data from the `V4NA03` dataset is for the lower 48, aka not including HI + AK or territories. 
 
-```{r, echo = F}
-
+County data:
+```{r, echo = F, message=F}
+pm_county = read_csv(file.path(data_path, "clean", "pm25",
+                                     "pm2000_county2010.csv"))
+head(pm_county %>% as.data.frame())
 ```
 
 **What**: 

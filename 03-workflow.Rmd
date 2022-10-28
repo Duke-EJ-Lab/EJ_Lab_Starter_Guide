@@ -9,6 +9,7 @@ This workflow section will cover a lot of expectations in pretty high detail and
 2) **Create a GitHub repo to store all your work in** that's within the Duke-EJ-Lab, based off the template. At the [`reproducible_project_template`](https://github.com/Duke-EJ-Lab/reproducible_project_template) page, hit the green "Use this template" button and choose a repository name that's descriptive of your project, separating words with "_". Set it to private while the work is in progress, so only other lab members can see the repository. 
 
 ```{r, echo = F, fig.align = "center", out.width="600px"}
+library(formatR)
 knitr::include_graphics(file.path("images", "github_reproducible_project_template.png"))
 ```
 
@@ -133,23 +134,21 @@ If you have a dataset that's of interest for the rest of the lab and you want to
 
 1) Write the documentation for the raw data following the following format. Add it to the [data](#data) section of this document, making sure to follow the instructions in the [contributing to the guide](#guide) section. 
 
-```
-#### path/to/data {-}
+    * `#### path/to/data {-}`
 
-**Cleaned formats**: This is a great place to load in the data and print out the first few rows so people can get a sense of what the data shows. Include a description of what an observation is. 
+    * **Cleaned formats**: This is a great place to load in the data and print out the first few rows so people can get a sense of what the data shows. Include a description of what an observation is. 
 
-**What**: What's the meaning of the data? What does it measure? Are there any known issues or things to be aware of if you're going to use it?
+    * **What**: What's the meaning of the data? What does it measure? Are there any known issues or things to be aware of if you're going to use it?
 
-Format: csv? raster? shapefile? excel? 
+      * Format: csv? raster? shapefile? excel? 
 
-Spatial Resolution + Coverage: What geographic region does it cover and what's the geographic unit that a row represents? blockgroup? city? the entire country? a 0.01° section?
+      * Spatial Resolution + Coverage: What geographic region does it cover and what's the geographic unit that a row represents? blockgroup? city? the entire country? a 0.01° section?
 
-Temporal Resolution + Coverage: What time does the data cover? Is it a yearly average? daily? Average over 2006-2020?
+      * Temporal Resolution + Coverage: What time does the data cover? Is it a yearly average? daily? Average over 2006-2020?
 
-**Where**: A link to where the data is sourced. The data in the raw folder should be directly downloadable from where you link to, with no changes to it. If the data isn't publicly available, give info of who you reached out to and the exact format they specified upon giving it to you. Be as precise as you can!
+    * **Where**: A link to where the data is sourced. The data in the raw folder should be directly downloadable from where you link to, with no changes to it. If the data isn't publicly available, give info of who you reached out to and the exact format they specified upon giving it to you. Be as precise as you can!
 
-**When**: When did you download the data? This is important in case a new release comes out. 
-```
+    * **When**: When did you download the data? This is important in case a new release comes out. 
 
 2) Once the data documentation is all there, you can move the raw file to the Box. 
 
