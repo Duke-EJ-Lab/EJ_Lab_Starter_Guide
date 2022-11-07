@@ -99,11 +99,6 @@ Variable and function names should be lowercase, and use an underscore to separa
 
 This is largely lifted from Hadley Wickham's [style guide](http://adv-r.had.co.nz/Style.html). Additional guidance can be found there, but these are the most important parts for us.
 
-
-## Documenting Data {-}
-
- * Ever piece of data in the raw folder needs to have documented the **what**, **when**, **how** of the data.
-
 ## Closing out a Project {-}
 
 There's lots of ways of re-organizing your code at the end of a project, and you should do whatever works best for you. That said, this is a system that works and feel free to use it. Make sure to read the sections on [contributing to the data bank](#databank) and [contributing to the lab package](#contpackage), since those are things to do regardless of your re-organizing process.
@@ -120,7 +115,7 @@ There's lots of ways of re-organizing your code at the end of a project, and you
   
     * Has comments explaining research choices. (think: why does it make sense to set the indicator variable to 0 if another variable is NA? not: why is important to account for PM2.5 when studying asthma outcomes)
 
-3) Make sure every data file in your project folder is documented following **when/how/what**: **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Remove data that is no longer relevant to the project. 
+3) Make sure every data file in your project folder is documented following **when/how/what**: **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means at a high level. Follow the format given in the [data section](#docformat). The full data dictionary should either be included in the same folder as the data or be easily accessible at the link to the data.
 
 4) Now that you've gone through all steps of your code and have a good conceptual sense of what is there, think if anything might generalize to other lab projects. If you have functions that might be generally useful, move them to the `lab.tools` package, as described in the [package section](#contpackage) and make sure your code is pulling the function from the package. If there's a really generalizable dataset that others might be able to use, move it to the lab data bank (ie the `clean` and `raw` folders of the Box, rather than your personal project folder). Data must be well documented, and the code to clean it must also be saved following the process described in the [databank section](#databank) below.
 

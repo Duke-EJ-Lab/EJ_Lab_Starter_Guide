@@ -52,70 +52,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -176,6 +112,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i>Data Library</a>
 <ul>
+<li class="chapter" data-level="" data-path="data.html"><a href="data.html#data-files-structure"><i class="fa fa-check"></i>Data Files Structure</a></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#documentation-format"><i class="fa fa-check"></i>Documentation format</a></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#environmental-data"><i class="fa fa-check"></i>Environmental Data</a>
 <ul>
@@ -261,6 +198,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://github.com/MilesMcBain/datapasta">datapasta</a>: if you ever copy and pasta data from an online table that you later use in your research you should be using this. It lets you copy and paste data directly into an R object, that can then be saved into your reproducible workflow.</li>
 <li><a href="https://rdrr.io/cran/exactextractr/">exactextractr</a>: helps you use rasters and shapefiles to figure out the values in the raster within the shapefile area. Gives lots of control over how you extract - aggregating functions, weighting each raster cell, etc.</li>
 <li><a href="https://www.rstudio.com/blog/feather/">feather</a>: a binary data format that is language agnostic with high write and read performance.</li>
+<li><a href="https://www.tidyverse.org/blog/2018/01/fs-1.0.0/">fs</a>: file systems operations! Makes your code portable across platforms</li>
 <li><a href="https://github.com/thomasp85/patchwork">patchwork</a>: lets you arrange several ggplot plots into table like configurations.</li>
 <li><a href="https://www.rdocumentation.org/packages/pbapply/versions/1.4-3/topics/pbapply">pbapply</a>: the classic lapply function, but provides a progress bar!</li>
 <li><a href="http://rstudio.github.io/profvis/">profvis</a>: gives you a graphical representation of how quickly each line of a block of code is running. A great tool when something is running slower than expected but you don’t really know where it’s going wrong.</li>
@@ -277,11 +215,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="package" class="section level3 unnumbered hasAnchor">
 <h3>Our lab package<a href="tools-to-know-about.html#package" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong><a href="https://github.com/Duke-EJ-Lab/lab.tools">Our lab package</a></strong>: an R package with a mismash of random helpful or fun functions. A sample of functions are listed below. Anyone can add to the package, and it’s great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator).
-* <code>detach_all_packages</code>: quickly wipes the packages loaded to your R environment, useful for ensuring reproducibility (since the packages you have loaded impact how things run!)
-* <code>beep_alert</code>: a function that tells you aloud that your code has finished running. Useful when you have things running just long enough that you want to go look at your email or something.
-* <code>merge_verbose</code>: wraps the base merge function, but spits out some info on your merge to the console.
-* some extra ggplot themes</p>
+<p><strong><a href="https://github.com/Duke-EJ-Lab/lab.tools">Our lab package</a></strong>: an R package with a mismash of random helpful or fun functions. A sample of functions are listed below. Anyone can add to the package, and it’s great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator).</p>
+<ul>
+<li><code>detach_all_packages</code>: quickly wipes the packages loaded to your R environment, useful for ensuring reproducibility (since the packages you have loaded impact how things run!)</li>
+<li><code>beep_alert</code>: a function that tells you aloud that your code has finished running. Useful when you have things running just long enough that you want to go look at your email or something.</li>
+<li><code>merge_verbose</code>: wraps the base merge function, but spits out some info on your merge to the console.</li>
+<li>some extra ggplot themes</li>
+</ul>
 </div>
 </div>
 <div id="cool-functions-to-know-about-r" class="section level2 unnumbered hasAnchor">
@@ -291,6 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>Hmisc::describe()</code>: sometimes more useful version of <code>summary</code> to peek into a dataset. It adds the number of distinct observations, as well as directly showing the highest and lowest observations.</li>
 <li><code>dplyr::complete()</code>: a function that can help making implicit NA’s explicit.</li>
 <li><code>BAMMtools::getJenksBreaks()</code>: great for plotting, given a vector it returns the “Jenks” breaks for cloropleth maps (commonly used in many GIS systems). Basically just returns a list of numbers that you can pass to a mapping function that specify where color changes should happen.</li>
+<li><code>janitor::clean_names()</code>: Takes a dataframe and will return with names that only consist of “_“, characters and numbers. Defaults to snake case, but can do other options. A nice way to make your naming consistent.</li>
 </ul>
 </div>
 <div id="basic-packages-to-know-about-python" class="section level2 unnumbered hasAnchor">
@@ -316,6 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><a href="https://kbroman.wordpress.com/2012/04/25/microarrays-suck/">How do we think about EDA and pipelines? blog</a></li>
 <li><a href="https://www.jumpingrivers.com/blog/personal-r-package/">personal R packages</a></li>
+<li><a href="https://theeffectbook.net/ch-FixedEffects.html">online resource on causal analysis</a></li>
 </ul>
 
 </div>

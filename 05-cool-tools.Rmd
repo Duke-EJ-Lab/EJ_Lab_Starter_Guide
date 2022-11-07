@@ -41,11 +41,12 @@
 
 ### Our lab package {-#package}
 
-**[Our lab package](https://github.com/Duke-EJ-Lab/lab.tools)**: an R package with a mismash of random helpful or fun functions. A sample of functions are listed below. Anyone can add to the package, and it's great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator).
-  * `detach_all_packages`: quickly wipes the packages loaded to your R environment, useful for ensuring reproducibility (since the packages you have loaded impact how things run!)
-  * `beep_alert`: a function that tells you aloud that your code has finished running. Useful when you have things running just long enough that you want to go look at your email or something.
-  * `merge_verbose`: wraps the base merge function, but spits out some info on your merge to the console.
-  * some extra ggplot themes
+**[Our lab package](https://github.com/Duke-EJ-Lab/lab.tools)**: an R package with a mismash of random helpful or fun functions. A sample of functions are listed below. Anyone can add to the package, and it's great to learn how to build a package!! Any useful functions you stumble upon can be added here (but make sure to include credit to the creator). The package documentation itself has all the info you need to learn to add a function. 
+
+* `detach_all_packages`: quickly wipes the packages loaded to your R environment, useful for ensuring reproducibility (since the packages you have loaded impact how things run!)
+* `beep_alert`: a function that tells you aloud that your code has finished running. Useful when you have things running just long enough that you want to go look at your email or something.
+* `merge_verbose`: wraps the base merge function, but spits out some info on your merge to the console.
+* some extra ggplot themes
 
 ## Cool functions to know about (R) {-}
 
@@ -54,9 +55,6 @@
 * `dplyr::complete()`: a function that can help making implicit NA's explicit.
 * `BAMMtools::getJenksBreaks()`: great for plotting, given a vector it returns the "Jenks" breaks for cloropleth maps (commonly used in many GIS systems). Basically just returns a list of numbers that you can pass to a mapping function that specify where color changes should happen.
 * `janitor::clean_names()`: Takes a dataframe and will return with names that only consist of "_", characters and numbers. Defaults to snake case, but can do other options. A nice way to make your naming consistent. 
-
-
-
 
 
 ## Basic packages to know about (Python) {-}

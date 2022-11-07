@@ -8,6 +8,27 @@ data_path = file.path("", "Users", "amd112", "Library", "CloudStorage",
                       "Box-Box", "adhoc_ejlab", "ejlab")
 ```
 
+## Documentation format {-#docformat}
+
+**Cleaned formats**: 
+
+```{r, echo = F}
+
+```
+
+**What**:
+
+Format:
+
+Spatial Resolution + Coverage:
+
+Temporal Resolution + Coverage:
+
+**Where**:
+
+**When**: 
+
+
 ## Data Files Structure {-}
 
 Not including the structure of the `projects` folder, since that contains
@@ -54,25 +75,6 @@ ejlab
  │   │	 ├── facility_data_rsei_v2310.csv
  │   │	 └── zipcode
 ```
-## Documentation format {-}
-
-**Cleaned formats**: 
-
-```{r, echo = F}
-
-```
-
-**What**:
-
-Format:
-
-Spatial Resolution + Coverage:
-
-Temporal Resolution + Coverage:
-
-**Where**:
-
-**When**: 
 
 ## Environmental Data {-}
 
