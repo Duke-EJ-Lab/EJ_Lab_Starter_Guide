@@ -8,6 +8,52 @@ data_path = file.path("", "Users", "amd112", "Library", "CloudStorage",
                       "Box-Box", "adhoc_ejlab", "ejlab")
 ```
 
+## Data Files Structure {-}
+
+Not including the structure of the `projects` folder, since that contains
+
+```
+ejlab
+ ├── boundaries
+ │	 └── lower 48
+ │	     ├── lower48_bg2010_simplified 
+ │	     ├── lower48_tracts2022_simplified
+ │	     └── lower48_tracts2022_ultra_simplified
+ ├── pm25
+ │	 └── pm[YYYY]_county2010.csv
+ ├── rsei
+ │	 ├── blockgroup
+ │	 │   └── RSEI_blockgroup_year[YYYY]_consistent2011_lower48.csv
+ │	 ├── county
+ │	 │   └── RSEI_county_year[YYYY]_consistent2011_lower48.csv
+ │	 └── tract
+ │	     └── RSEI_tract_year[YYYY]_consistent2011_lower48.csv
+ ├── raw
+ │   ├── boundaries
+ │   │	 ├── blockgroups
+ │	 │   │   └── 2010
+ │	 │   │   │   └── tl_2010_[XX]_bg10 (where XX is state fips)
+ │	 │   │   └── 2022
+ │	 │   │       └── tl_2022_[XX]_bg (where XX is state fips)
+ │   │	 ├── cb_2018_us_county_20m
+ │   │	 ├── cb_2018_us_state_20m
+ │   │	 ├── tl_2010_us_county10
+ │   │	 ├── tl_2010_us_state10
+ │   │	 ├── tl_2020_us_county
+ │   │	 ├── tl_2020_us_state
+ │   │	 └── tract
+ │	 │       └── 2022
+ │	 │           └── tl_2022_[XX]_tract (where XX is state fips)
+ │   ├── pm25
+ │   │	 └── V4NA03
+ │	 │       └── V4NA03_PM25_NA_[YYYY]01_[YYYY]12-RH35-NoNegs.asc (1988-2020)
+ │   └── rsei
+ │   │	 ├── blockgroup
+ │	 │   │   └── censusmicroblockgroup2020_[YYYY].csv 
+ │   │	 ├── chemical_data_rsei_v2310.csv
+ │   │	 ├── facility_data_rsei_v2310.csv
+ │   │	 └── zipcode
+```
 ## Documentation format {-}
 
 **Cleaned formats**: 
