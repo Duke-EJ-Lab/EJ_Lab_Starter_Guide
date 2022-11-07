@@ -77,3 +77,4 @@
 
 * [How do we think about EDA and pipelines? blog](https://kbroman.wordpress.com/2012/04/25/microarrays-suck/)
 * [personal R packages](https://www.jumpingrivers.com/blog/personal-r-package/)
+* [online resource on causal analysis](https://theeffectbook.net/ch-FixedEffects.html)
