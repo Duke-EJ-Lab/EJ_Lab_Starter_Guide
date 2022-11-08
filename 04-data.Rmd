@@ -4,8 +4,9 @@
 library(readr)
 library(raster)
 library(tidyverse)
-data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", 
-                      "Box-Box", "adhoc_ejlab", "ejlab")
+# data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", 
+#                       "Box-Box", "adhoc_ejlab", "ejlab")
+data_path = ("C:/Users/Wendy/Box/adhoc_ejlab/ejlab")
 ```
 
 ## Documentation format {-#docformat}

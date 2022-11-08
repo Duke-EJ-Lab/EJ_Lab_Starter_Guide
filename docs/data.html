@@ -52,6 +52,70 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -102,7 +166,6 @@
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#file-naming"><i class="fa fa-check"></i>File Naming</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#object-naming"><i class="fa fa-check"></i>Object naming</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#documenting-data"><i class="fa fa-check"></i>Documenting Data</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#closing-out-a-project"><i class="fa fa-check"></i>Closing out a Project</a>
 <ul>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#databank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
@@ -112,7 +175,8 @@
 </ul></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i>Data Library</a>
 <ul>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#documentation-format"><i class="fa fa-check"></i>Documentation format</a></li>
+<li class="chapter" data-level="" data-path="data.html"><a href="data.html#docformat"><i class="fa fa-check"></i>Documentation format</a></li>
+<li class="chapter" data-level="" data-path="data.html"><a href="data.html#data-files-structure"><i class="fa fa-check"></i>Data Files Structure</a></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#environmental-data"><i class="fa fa-check"></i>Environmental Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#rsei"><i class="fa fa-check"></i>RSEI</a></li>
@@ -169,8 +233,8 @@
             <section class="normal" id="section-">
 <div id="data" class="section level1 unnumbered hasAnchor">
 <h1>Data Library<a href="data.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="documentation-format" class="section level2 unnumbered hasAnchor">
-<h2>Documentation format<a href="data.html#documentation-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="docformat" class="section level2 unnumbered hasAnchor">
+<h2>Documentation format<a href="data.html#docformat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Cleaned formats</strong>:</p>
 <p><strong>What</strong>:</p>
 <p>Format:</p>
@@ -178,6 +242,50 @@
 <p>Temporal Resolution + Coverage:</p>
 <p><strong>Where</strong>:</p>
 <p><strong>When</strong>:</p>
+</div>
+<div id="data-files-structure" class="section level2 unnumbered hasAnchor">
+<h2>Data Files Structure<a href="data.html#data-files-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Not including the structure of the <code>projects</code> folder, since that contains</p>
+<pre><code>ejlab
+ ├── boundaries
+ │   └── lower 48
+ │       ├── lower48_bg2010_simplified 
+ │       ├── lower48_tracts2022_simplified
+ │       └── lower48_tracts2022_ultra_simplified
+ ├── pm25
+ │   └── pm[YYYY]_county2010.csv
+ ├── rsei
+ │   ├── blockgroup
+ │   │   └── RSEI_blockgroup_year[YYYY]_consistent2011_lower48.csv
+ │   ├── county
+ │   │   └── RSEI_county_year[YYYY]_consistent2011_lower48.csv
+ │   └── tract
+ │       └── RSEI_tract_year[YYYY]_consistent2011_lower48.csv
+ ├── raw
+ │   ├── boundaries
+ │   │   ├── blockgroups
+ │   │   │   └── 2010
+ │   │   │   │   └── tl_2010_[XX]_bg10 (where XX is state fips)
+ │   │   │   └── 2022
+ │   │   │       └── tl_2022_[XX]_bg (where XX is state fips)
+ │   │   ├── cb_2018_us_county_20m
+ │   │   ├── cb_2018_us_state_20m
+ │   │   ├── tl_2010_us_county10
+ │   │   ├── tl_2010_us_state10
+ │   │   ├── tl_2020_us_county
+ │   │   ├── tl_2020_us_state
+ │   │   └── tract
+ │   │       └── 2022
+ │   │           └── tl_2022_[XX]_tract (where XX is state fips)
+ │   ├── pm25
+ │   │   └── V4NA03
+ │   │       └── V4NA03_PM25_NA_[YYYY]01_[YYYY]12-RH35-NoNegs.asc (1988-2020)
+ │   └── rsei
+ │   │   ├── blockgroup
+ │   │   │   └── censusmicroblockgroup2020_[YYYY].csv 
+ │   │   ├── chemical_data_rsei_v2310.csv
+ │   │   ├── facility_data_rsei_v2310.csv
+ │   │   └── zipcode</code></pre>
 </div>
 <div id="environmental-data" class="section level2 unnumbered hasAnchor">
 <h2>Environmental Data<a href="data.html#environmental-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -248,7 +356,7 @@
 ## 6 01011 12.00997</code></pre>
 <p><strong>What</strong>:</p>
 <p>Format: raster
-<img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box <code>raw</code> folder is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5. The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you’ll need to download their Global/Regional Estimates (V5.GL.02).</p>
 <p>Temporal Resolution + Coverage: The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level.</p>
 <p><strong>Where:</strong> Information on the different products can be found <a href="https://sites.wustl.edu/acag/datasets/surface-pm2-5/">here</a>. We have <code>V4.NA.03</code> data.</p>
