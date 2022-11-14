@@ -175,6 +175,28 @@ Temporal Resolution + Coverage: The PM 2.5 data that lives in Box currently cove
 ## Social Data {-}
 
 ### Eviction Lab {-}
+**What**:
+Eviction lab data from the Eviction lab at Princeton University. A collection of cleaned geocoded, aggregated, set of court-ordered evictions that occurred between 2000 and 2016 in the United States. Consists of 82 million plus court records related to eviction cases. 
+
+**Sourcing**
+The data is sourced by the Eviction lab by collecting eviction records (All landlord/tenant related cases) en masse from court clerks and by asking for bulk reports which provide a corpus of the court's eviction case info such as names addresses, dates, and outcomes. FOIA (Freedom of Information Act) extends the right to access eviction records. Through these bulk requests, they obtained 12.9 million individual level court ordered eviction records.
+The eviction lab also purchased data sets of public eviction records from two companies, LexisNexis Risk Solutions and American Information Research Services Inc. They obtained about 66.5 million records from LexisNexis and 10.6 million records from AIRS.
+**Where**:
+United States. Eviction lab's own bulk requests were from all 50 states. LexisNexis included records from all states except North and South Dakota, AIRS provides eviction records from 6 states, Arizona, California, New Jersey, Nevada, Ohio and Oregon.
+
+**When**: 
+Data from year 2000 and 2016.
+
+**Cleaning**
+1) Regular expressions were used to to match cases and names. (Levenshtein distance between pariwise combination was used as metric in matching). 
+2) Duplicate and non-meaningful records were removed.(perfect duplicates were dropped, and duplicates where all key variables such as full defendant name, street address, city, state, zip...etc were dropped. Serial cases, one landlord on the same tenant was identified and classified as one case) 
+3) Commercial defendants were removed ("commercial" if at least one defendant was identified as commercial entity, keywords such as Inc, Corporation, LLC, exclusion of 1.55%). 
+4) Date records were assigned using the earliest action on a case.
+5) Standardized spelling and abbreviations.
+6) Cleaned city names, state abbreviations, and zipcodes via comparison to standardized listings of city names and state abbreviations (fom Zip Codes To Go and Zip Code Tabulation Areas). Used MatchIt program in Stata to find best standardized match.
+7) Geocoding was done by submitting the files to the Environmental Systems Research Institute. After address was assigned to latitude and longitude coordinates, the location could then be linked to other geographical area units such as Census tracts.
+8) Estimation of prevalence: case outcome was classified as eviction if it contained a record of either money or forcible detainer judgement for plaintif. Case volume fluctuation across states (recorded evication data were not uniform across state and time, some areas where volume of cases collected was substantially lower than expected based on demographic variables state court-reported volume) were standardized by comparing data to evictionc ase volume statistics received directly from state and local courts. 
+9) To calculate eviction and filing rates, the number of evictions and filings were divided by the number of renter-occupied households in that area.
 
 ### InfoUSA {-}
 
