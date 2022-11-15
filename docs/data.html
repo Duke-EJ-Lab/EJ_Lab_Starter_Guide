@@ -185,6 +185,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#social-data"><i class="fa fa-check"></i>Social Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#eviction-lab"><i class="fa fa-check"></i>Eviction Lab</a></li>
+<li class="chapter" data-level="" data-path="data.html"><a href="data.html#infousa"><i class="fa fa-check"></i>InfoUSA</a></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#corelogic"><i class="fa fa-check"></i>Corelogic</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#other"><i class="fa fa-check"></i>Other</a>
@@ -409,7 +410,7 @@ dataset is for the lower 48, aka not including HI + AK or territories.</p>
 ## 6 01011 12.00997</code></pre>
 <p><strong>What</strong>:</p>
 <p>Format: raster</p>
-<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box
 <code>raw</code> folder is in a raster format, one of the finest resolution
 datasets (0.01° × 0.01°) built for PM 2.5. The data we have pre-loaded
@@ -477,12 +478,12 @@ identified and classified as one case)</p></li>
 <li><p>Commercial defendants were removed (“commercial” if at least one
 defendant was identified as commercial entity, keywords such as Inc,
 Corporation, LLC, exclusion of 1.55%).</p></li>
-<li><p>Date records were assigned using the earliest action on a case.\ 5)
-Standardized spelling and abbreviations.\ 6) Cleaned city names,
-state abbreviations, and zipcodes via comparison to standardized
-listings of city names and state abbreviations (fom Zip Codes To Go
-and Zip Code Tabulation Areas). Used MatchIt program in Stata to
-find best standardized match.</p></li>
+<li><p>Date records were assigned using the earliest action on a case.</p></li>
+<li><p>Standardized spelling and abbreviations.</p></li>
+<li><p>Cleaned city names, state abbreviations, and zipcodes via comparison
+to standardized listings of city names and state abbreviations (fom
+Zip Codes To Go and Zip Code Tabulation Areas). Used MatchIt program
+in Stata to find best standardized match.</p></li>
 <li><p>Geocoding was done by submitting the files to the Environmental
 Systems Research Institute. After address was assigned to latitude
 and longitude coordinates, the location could then be linked to
@@ -505,7 +506,7 @@ that area.</p></li>
 <p>Stata dofile of all the cleaning is located in box.</p>
 <ol style="list-style-type: decimal">
 <li><p>Stata versions of all files were created.Block-groups data was
-renamed blocks, both versions were stored.\</p></li>
+renamed blocks, both versions were stored.</p></li>
 <li><p>blocks.dta was used, variable ‘parentlocation’ was split by comma,
 and the first part was renamed ‘county’ and second part renamed
 ‘state’. File was saved as DTA and CSV in the cleaned datasets
@@ -519,9 +520,12 @@ into individual states, and stored in folder ‘Tracts by State’</p></li>
 <li><p>The ‘cities’, ‘counties’, ‘states’ files in the downloaded data
 folder were modified, the ‘parentlocation’ variable was renamed
 state and the modified files were stored in the ‘Cleaned DTA
-Datasets’ as well as ’Cleaned CSV Datasets” ### InfoUSA {-}</p></li>
+Datasets’ as well as ’Cleaned CSV Datasets”</p></li>
 </ol>
 </div>
+</div>
+<div id="infousa" class="section level3 unnumbered hasAnchor">
+<h3>InfoUSA<a href="data.html#infousa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 <div id="corelogic" class="section level3 unnumbered hasAnchor">
 <h3>Corelogic<a href="data.html#corelogic" class="anchor-section" aria-label="Anchor link to header"></a></h3>

@@ -333,7 +333,7 @@ California, New Jersey, Nevada, Ohio and Oregon.
 Stata dofile of all the cleaning is located in box.
 
 1)  Stata versions of all files were created.Block-groups data was
-    renamed blocks, both versions were stored.\\
+    renamed blocks, both versions were stored.
 
 2)  blocks.dta was used, variable 'parentlocation' was split by comma,
     and the first part was renamed 'county' and second part renamed
