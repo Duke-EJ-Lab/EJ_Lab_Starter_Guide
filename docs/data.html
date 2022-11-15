@@ -185,7 +185,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#social-data"><i class="fa fa-check"></i>Social Data</a>
 <ul>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#eviction-lab"><i class="fa fa-check"></i>Eviction Lab</a></li>
-<li class="chapter" data-level="" data-path="data.html"><a href="data.html#infousa"><i class="fa fa-check"></i>InfoUSA</a></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#corelogic"><i class="fa fa-check"></i>Corelogic</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#other"><i class="fa fa-check"></i>Other</a>
@@ -246,7 +245,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="data-files-structure" class="section level2 unnumbered hasAnchor">
 <h2>Data Files Structure<a href="data.html#data-files-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Not including the structure of the <code>projects</code> folder, since that contains</p>
+<p>Not including the structure of the <code>projects</code> folder, since that
+contains</p>
 <pre><code>ejlab
  ├── boundaries
  │   └── lower 48
@@ -292,24 +292,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Environmental Data<a href="data.html#environmental-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="rsei" class="section level3 unnumbered hasAnchor">
 <h3>RSEI<a href="data.html#rsei" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The Risk Screening Environmental Indicators (RSEI) is a measure of exposure to toxic chemicals from the EPA. The data helps “explore data on releases of toxic substances from industrial and federal facilities. RSEI incorporates information from the Toxics Release Inventory (TRI) on the amount of toxic chemicals released, together with factors such as the chemical’s fate and transport through the environment, each chemical’s relative toxicity, and potential human exposure.” Using the repoted chemical releases combined with the fate and transport models lets us know where people are exposed to those chemical releases.</p>
+<p>The Risk Screening Environmental Indicators (RSEI) is a measure of
+exposure to toxic chemicals from the EPA. The data helps “explore data
+on releases of toxic substances from industrial and federal facilities.
+RSEI incorporates information from the Toxics Release Inventory (TRI) on
+the amount of toxic chemicals released, together with factors such as
+the chemical’s fate and transport through the environment, each
+chemical’s relative toxicity, and potential human exposure.” Using the
+repoted chemical releases combined with the fate and transport models
+lets us know where people are exposed to those chemical releases.</p>
 <div id="rawrseichemical_data_rsei_v2310.csv" class="section level4 unnumbered hasAnchor">
 <h4>raw/rsei/chemical_data_rsei_v2310.csv<a href="data.html#rawrseichemical_data_rsei_v2310.csv" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Cleaned formats</strong>: NA</p>
-<p><strong>What</strong>: “The chemical table contains data [on which are] chemicals reported to TRI, including toxicity, physico-chemical properties, and flag fields to facilitate user selections. The chemical table is also available in EasyRSEI.” <a href="https://www.epa.gov/rsei/rsei-data-dictionary-chemical-data">Data dictionary</a></p>
-<p><strong>Where</strong>: <a href="https://www.epa.gov/system/files/other-files/2022-02/chemical_data_rsei_v2310.csv">Download</a></p>
+<p><strong>What</strong>: “The chemical table contains data [on which are] chemicals
+reported to TRI, including toxicity, physico-chemical properties, and
+flag fields to facilitate user selections. The chemical table is also
+available in EasyRSEI.” <a href="https://www.epa.gov/rsei/rsei-data-dictionary-chemical-data">Data
+dictionary</a></p>
+<p><strong>Where</strong>:
+<a href="https://www.epa.gov/system/files/other-files/2022-02/chemical_data_rsei_v2310.csv">Download</a></p>
 <p><strong>When</strong>: 09/26/22</p>
 </div>
 <div id="rawrseifacility_data_rsei_v2310.csv" class="section level4 unnumbered hasAnchor">
 <h4>raw/rsei/facility_data_rsei_v2310.csv<a href="data.html#rawrseifacility_data_rsei_v2310.csv" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><strong>Cleaned formats</strong>: NA</p>
-<p><strong>What</strong>: “The facility table contains data for reporting facilities, including location, stack parameters and discharge reach, and is also available in EasyRSEI.” <a href="https://www.epa.gov/rsei/rsei-data-dictionary-facility-data">Data dictionary</a></p>
-<p><strong>Where</strong>: <a href="https://www.epa.gov/system/files/other-files/2022-02/facility_data_rsei_v2310.csv">Download</a></p>
+<p><strong>What</strong>: “The facility table contains data for reporting facilities,
+including location, stack parameters and discharge reach, and is also
+available in EasyRSEI.” <a href="https://www.epa.gov/rsei/rsei-data-dictionary-facility-data">Data
+dictionary</a></p>
+<p><strong>Where</strong>:
+<a href="https://www.epa.gov/system/files/other-files/2022-02/facility_data_rsei_v2310.csv">Download</a></p>
 <p><strong>When</strong>: 09/26/22</p>
 </div>
 <div id="rawrseiblockgroup" class="section level4 unnumbered hasAnchor">
 <h4>raw/rsei/blockgroup<a href="data.html#rawrseiblockgroup" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><strong>Cleaned formats</strong>: Processed versions of the RSEI data exist at the blockgroup, tract, and county levels. Because of reporting requirements, if you’re using RSEI in any timeseries you need to drop certain observations so that there aren’t huge jumps in years where reporting requirements change - currently data is only processed for the consistent set of chemicals that exists starting in 2011. There is code in the <code>general_cleaning</code> GitHub that would allow you to clean for other year sets in case your year is prior to 2011. The data follows the naming convention <code>RSEI_[geographic level]_year[AAAA]_consistent[BBBB]_lower48.csv</code>, where <code>geographic level</code> is either “blockgroup”, “tract” or “county”, <code>AAAA</code> is the four digit year for which the RSEI data is pulled, and <code>BBBB</code> is the four digit year that the chemicals are consistent for. <code>BBBB</code> should never be a year that came after <code>AAAA</code>. Lower 48 indicates the data does not include HI + AK or territories.</p>
+<p><strong>Cleaned formats</strong>: Processed versions of the RSEI data exist at the
+blockgroup, tract, and county levels. Because of reporting requirements,
+if you’re using RSEI in any timeseries you need to drop certain
+observations so that there aren’t huge jumps in years where reporting
+requirements change - currently data is only processed for the
+consistent set of chemicals that exists starting in 2011. There is code
+in the <code>general_cleaning</code> GitHub that would allow you to clean for other
+year sets in case your year is prior to 2011. The data follows the
+naming convention
+<code>RSEI_[geographic level]_year[AAAA]_consistent[BBBB]_lower48.csv</code>, where
+<code>geographic level</code> is either “blockgroup”, “tract” or “county”, <code>AAAA</code>
+is the four digit year for which the RSEI data is pulled, and <code>BBBB</code> is
+the four digit year that the chemicals are consistent for. <code>BBBB</code> should
+never be a year that came after <code>AAAA</code>. Lower 48 indicates the data does
+not include HI + AK or territories.</p>
 <p>Blockgroup data:</p>
 <pre><code>##          geoid  toxconc
 ## 1 010010201001 421.9514
@@ -335,10 +366,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5 01009 5077.8284
 ## 6 01011  243.6445</code></pre>
 <p><strong>What</strong>:</p>
-<p>Format: csv. Each observation in the data is a spill of a specific chemical in a specific blockgroup, with accompanying information on the part of the spill relevant to the blockgroup. Important to consider that each row is NOT the entirety of a spill, NOT the entirety of the toxicity in the blockgroup and NOT the entirety of the impact of a facility, though you can aggregate to investigate spills, blockgroups or facilities. <a href="https://www.epa.gov/system/files/documents/2022-07/rsei-documentation-geographic-microdata-july-2022.pdf">This documentation</a> is helpful in thinking through what the data is and what is an appropriate interpretation.</p>
-<p>Spatial Resolution + Coverage: Each observation is the impact at the blockgroup level, for all US blockgroups.</p>
-<p>Temporal Resolution + Coverage: Each file is named <code>censusmicroblockgroup2020_[YYYY].csv</code>, where the YYYY indicates the year of coverage. It can only be interpreted at the year level, there’s no way to break up further temporally.</p>
-<p><strong>Where:</strong> <a href="http://abt-rsei.s3-website-us-east-1.amazonaws.com/?prefix=microdata2020/census_full/">Download</a></p>
+<p>Format: csv. Each observation in the data is a spill of a specific
+chemical in a specific blockgroup, with accompanying information on the
+part of the spill relevant to the blockgroup. Important to consider that
+each row is NOT the entirety of a spill, NOT the entirety of the
+toxicity in the blockgroup and NOT the entirety of the impact of a
+facility, though you can aggregate to investigate spills, blockgroups or
+facilities. <a href="https://www.epa.gov/system/files/documents/2022-07/rsei-documentation-geographic-microdata-july-2022.pdf">This
+documentation</a>
+is helpful in thinking through what the data is and what is an
+appropriate interpretation.</p>
+<p>Spatial Resolution + Coverage: Each observation is the impact at the
+blockgroup level, for all US blockgroups.</p>
+<p>Temporal Resolution + Coverage: Each file is named
+<code>censusmicroblockgroup2020_[YYYY].csv</code>, where the YYYY indicates the
+year of coverage. It can only be interpreted at the year level, there’s
+no way to break up further temporally.</p>
+<p><strong>Where:</strong>
+<a href="http://abt-rsei.s3-website-us-east-1.amazonaws.com/?prefix=microdata2020/census_full/">Download</a></p>
 <p><strong>When:</strong> Downloaded 10/9/2022.</p>
 </div>
 </div>
@@ -346,7 +391,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>PM 2.5<a href="data.html#pm-2.5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="rawpm25v4na03" class="section level4 unnumbered hasAnchor">
 <h4>raw/pm25/V4NA03<a href="data.html#rawpm25v4na03" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p><strong>Cleaned formats</strong>: Processed versions of the PM2.5 data exists at the county level for 2000-2018. Currently, there is only a version for 2010 county boundaries. There is code in the <code>general_cleaning</code> GitHub that could be adapted to clean for other shapefiles. The data follows the naming convention <code>pm[AAAA]_county[BBBB].csv</code>, where <code>AAAA</code> is the four digit year for which the pm data is pulled, and <code>BBBB</code> is the four digit year that the county boundaries are from. All data from the <code>V4NA03</code> dataset is for the lower 48, aka not including HI + AK or territories.</p>
+<p><strong>Cleaned formats</strong>: Processed versions of the PM2.5 data exists at the
+county level for 2000-2018. Currently, there is only a version for 2010
+county boundaries. There is code in the <code>general_cleaning</code> GitHub that
+could be adapted to clean for other shapefiles. The data follows the
+naming convention <code>pm[AAAA]_county[BBBB].csv</code>, where <code>AAAA</code> is the four
+digit year for which the pm data is pulled, and <code>BBBB</code> is the four digit
+year that the county boundaries are from. All data from the <code>V4NA03</code>
+dataset is for the lower 48, aka not including HI + AK or territories.</p>
 <p>County data:</p>
 <pre><code>##    fips     pm25
 ## 1 01001 13.53732
@@ -356,11 +408,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5 01009 14.47244
 ## 6 01011 12.00997</code></pre>
 <p><strong>What</strong>:</p>
-<p>Format: raster
-<img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
-<p>Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box <code>raw</code> folder is in a raster format, one of the finest resolution datasets (0.01° × 0.01°) built for PM 2.5. The data we have pre-loaded is specifically for North America, and only covers the contiguous 48, if you need Alaska and Hawaii, or international data you’ll need to download their Global/Regional Estimates (V5.GL.02).</p>
-<p>Temporal Resolution + Coverage: The PM 2.5 data that lives in Box currently covers 2018-2000 and is at a yearly average level.</p>
-<p><strong>Where:</strong> Information on the different products can be found <a href="https://sites.wustl.edu/acag/datasets/surface-pm2-5/">here</a>. We have <code>V4.NA.03</code> data.</p>
+<p>Format: raster</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Spatial Resolution + Coverage: The PM 2.5 data that lives in the Box
+<code>raw</code> folder is in a raster format, one of the finest resolution
+datasets (0.01° × 0.01°) built for PM 2.5. The data we have pre-loaded
+is specifically for North America, and only covers the contiguous 48, if
+you need Alaska and Hawaii, or international data you’ll need to
+download their Global/Regional Estimates (V5.GL.02).</p>
+<p>Temporal Resolution + Coverage: The PM 2.5 data that lives in Box
+currently covers 2018-2000 and is at a yearly average level.</p>
+<p><strong>Where:</strong> Information on the different products can be found
+<a href="https://sites.wustl.edu/acag/datasets/surface-pm2-5/">here</a>. We have
+<code>V4.NA.03</code> data.</p>
 <p><strong>When:</strong> Downloaded 10/9/2022.</p>
 </div>
 </div>
@@ -369,28 +429,99 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>Social Data<a href="data.html#social-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="eviction-lab" class="section level3 unnumbered hasAnchor">
 <h3>Eviction Lab<a href="data.html#eviction-lab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>What</strong>:
-Eviction lab data from the Eviction lab at Princeton University. A collection of cleaned geocoded, aggregated, set of court-ordered evictions that occurred between 2000 and 2016 in the United States. Consists of 82 million plus court records related to eviction cases.</p>
-<p><strong>Sourcing</strong>
-The data is sourced by the Eviction lab by collecting eviction records (All landlord/tenant related cases) en masse from court clerks and by asking for bulk reports which provide a corpus of the court’s eviction case info such as names addresses, dates, and outcomes. FOIA (Freedom of Information Act) extends the right to access eviction records. Through these bulk requests, they obtained 12.9 million individual level court ordered eviction records.
-The eviction lab also purchased data sets of public eviction records from two companies, LexisNexis Risk Solutions and American Information Research Services Inc. They obtained about 66.5 million records from LexisNexis and 10.6 million records from AIRS.
-<strong>Where</strong>:
-United States. Eviction lab’s own bulk requests were from all 50 states. LexisNexis included records from all states except North and South Dakota, AIRS provides eviction records from 6 states, Arizona, California, New Jersey, Nevada, Ohio and Oregon.</p>
-<p><strong>When</strong>:
-Data from year 2000 and 2016.</p>
-<p><strong>Cleaning</strong>
-1) Regular expressions were used to to match cases and names. (Levenshtein distance between pariwise combination was used as metric in matching).
-2) Duplicate and non-meaningful records were removed.(perfect duplicates were dropped, and duplicates where all key variables such as full defendant name, street address, city, state, zip…etc were dropped. Serial cases, one landlord on the same tenant was identified and classified as one case)
-3) Commercial defendants were removed (“commercial” if at least one defendant was identified as commercial entity, keywords such as Inc, Corporation, LLC, exclusion of 1.55%).
-4) Date records were assigned using the earliest action on a case.
-5) Standardized spelling and abbreviations.
-6) Cleaned city names, state abbreviations, and zipcodes via comparison to standardized listings of city names and state abbreviations (fom Zip Codes To Go and Zip Code Tabulation Areas). Used MatchIt program in Stata to find best standardized match.
-7) Geocoding was done by submitting the files to the Environmental Systems Research Institute. After address was assigned to latitude and longitude coordinates, the location could then be linked to other geographical area units such as Census tracts.
-8) Estimation of prevalence: case outcome was classified as eviction if it contained a record of either money or forcible detainer judgement for plaintif. Case volume fluctuation across states (recorded evication data were not uniform across state and time, some areas where volume of cases collected was substantially lower than expected based on demographic variables state court-reported volume) were standardized by comparing data to evictionc ase volume statistics received directly from state and local courts.
-9) To calculate eviction and filing rates, the number of evictions and filings were divided by the number of renter-occupied households in that area.</p>
+<p><strong>What</strong>: Eviction lab data from the Eviction lab at Princeton
+University. A collection of cleaned geocoded, aggregated, set of
+court-ordered evictions that occurred between 2000 and 2016 in the
+United States. Consists of 82 million plus court records related to
+eviction cases.</p>
+<p>Format of the data is in CSV as well as DTA formats.</p>
+<p>Data is Geo coded down to the block group level, (also have tract level
+data), geocoding is done with fips codes</p>
+<blockquote>
+<p><em><strong>Variables:</strong> “county”, “evictionfilingrate”, “evictionfilings” ,
+“evictionrate” ,“evictions”, “geoid”, “imputed”, “lowflag” ,
+“mediangrossrent”, “medianhouseholdincome”, “medianpropertyvalue”,
+“name”, “parentlocation” , “pctafam” , “pctamind”, “pctasian”,
+“pcthispanic”, “pctmultiple”, “pctnhpi”, “pctother”,
+“pctrenteroccupied”, “pctwhite”, “population”, “povertyrate”,
+“rentburden”, “renteroccupiedhouseholds” “state”, “subbed”, “year”</em></p>
+</blockquote>
+<p><strong>Sourcing</strong> The data is sourced by the Eviction lab by collecting
+eviction records (All landlord/tenant related cases) en masse from court
+clerks and by asking for bulk reports which provide a corpus of the
+court’s eviction case info such as names addresses, dates, and outcomes.
+FOIA (Freedom of Information Act) extends the right to access eviction
+records. Through these bulk requests, they obtained 12.9 million
+individual level court ordered eviction records. The eviction lab also
+purchased data sets of public eviction records from two companies,
+LexisNexis Risk Solutions and American Information Research Services
+Inc. They obtained about 66.5 million records from LexisNexis and 10.6
+million records from AIRS.</p>
+<p><strong>Where</strong>: United States. Eviction lab’s own bulk requests were from all
+50 states. LexisNexis included records from all states except North and
+South Dakota, AIRS provides eviction records from 6 states, Arizona,
+California, New Jersey, Nevada, Ohio and Oregon.</p>
+<p><strong>When</strong>: Data from year 2000 and 2016.</p>
+<p><strong>Cleaning</strong></p>
+<div id="by-eviction-lab" class="section level5 hasAnchor" number="0.0.0.0.1">
+<h5><span class="header-section-number">0.0.0.0.1</span> <strong>by Eviction Lab</strong><a href="data.html#by-eviction-lab" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<ol style="list-style-type: decimal">
+<li><p>Regular expressions were used to to match cases and names.
+(Levenshtein distance between pariwise combination was used as
+metric in matching).</p></li>
+<li><p>Duplicate and non-meaningful records were removed.(perfect
+duplicates were dropped, and duplicates where all key variables such
+as full defendant name, street address, city, state, zip…etc were
+dropped. Serial cases, one landlord on the same tenant was
+identified and classified as one case)</p></li>
+<li><p>Commercial defendants were removed (“commercial” if at least one
+defendant was identified as commercial entity, keywords such as Inc,
+Corporation, LLC, exclusion of 1.55%).</p></li>
+<li><p>Date records were assigned using the earliest action on a case.\ 5)
+Standardized spelling and abbreviations.\ 6) Cleaned city names,
+state abbreviations, and zipcodes via comparison to standardized
+listings of city names and state abbreviations (fom Zip Codes To Go
+and Zip Code Tabulation Areas). Used MatchIt program in Stata to
+find best standardized match.</p></li>
+<li><p>Geocoding was done by submitting the files to the Environmental
+Systems Research Institute. After address was assigned to latitude
+and longitude coordinates, the location could then be linked to
+other geographical area units such as Census tracts.</p></li>
+<li><p>Estimation of prevalence: case outcome was classified as eviction if
+it contained a record of either money or forcible detainer judgement
+for plaintif. Case volume fluctuation across states (recorded
+evication data were not uniform across state and time, some areas
+where volume of cases collected was substantially lower than
+expected based on demographic variables state court-reported volume)
+were standardized by comparing data to eviction case volume
+statistics received directly from state and local courts.</p></li>
+<li><p>To calculate eviction and filing rates, the number of evictions and
+filings were divided by the number of renter-occupied households in
+that area.</p></li>
+</ol>
 </div>
-<div id="infousa" class="section level3 unnumbered hasAnchor">
-<h3>InfoUSA<a href="data.html#infousa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="by-individual" class="section level5 hasAnchor" number="0.0.0.0.2">
+<h5><span class="header-section-number">0.0.0.0.2</span> <strong>by Individual</strong><a href="data.html#by-individual" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<p>Stata dofile of all the cleaning is located in box.</p>
+<ol style="list-style-type: decimal">
+<li><p>Stata versions of all files were created.Block-groups data was
+renamed blocks, both versions were stored.\</p></li>
+<li><p>blocks.dta was used, variable ‘parentlocation’ was split by comma,
+and the first part was renamed ‘county’ and second part renamed
+‘state’. File was saved as DTA and CSV in the cleaned datasets
+section.</p></li>
+<li><p>Cleaned blocks.dta was then broken down into individual states, and
+these datasets were stored in folder ‘Block Groups by State’.</p></li>
+<li><p>tracts.dta was used in a similar way, the variable ‘parentlocation’
+was also split into ‘county’ and ‘state’. then File was saved as DTA
+and CSV in the cleaned datasets section. It was also broken down
+into individual states, and stored in folder ‘Tracts by State’</p></li>
+<li><p>The ‘cities’, ‘counties’, ‘states’ files in the downloaded data
+folder were modified, the ‘parentlocation’ variable was renamed
+state and the modified files were stored in the ‘Cleaned DTA
+Datasets’ as well as ’Cleaned CSV Datasets” ### InfoUSA {-}</p></li>
+</ol>
+</div>
 </div>
 <div id="corelogic" class="section level3 unnumbered hasAnchor">
 <h3>Corelogic<a href="data.html#corelogic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
