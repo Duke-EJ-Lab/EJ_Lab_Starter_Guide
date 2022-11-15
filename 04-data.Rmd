@@ -301,19 +301,21 @@ California, New Jersey, Nevada, Ohio and Oregon.
     defendant was identified as commercial entity, keywords such as Inc,
     Corporation, LLC, exclusion of 1.55%).
 
-4)  Date records were assigned using the earliest action on a case.\\ 5)
-    Standardized spelling and abbreviations.\\ 6) Cleaned city names,
-    state abbreviations, and zipcodes via comparison to standardized
-    listings of city names and state abbreviations (fom Zip Codes To Go
-    and Zip Code Tabulation Areas). Used MatchIt program in Stata to
-    find best standardized match.
+4)  Date records were assigned using the earliest action on a case.
 
-5)  Geocoding was done by submitting the files to the Environmental
+5)  Standardized spelling and abbreviations.
+
+6)  Cleaned city names, state abbreviations, and zipcodes via comparison
+    to standardized listings of city names and state abbreviations (fom
+    Zip Codes To Go and Zip Code Tabulation Areas). Used MatchIt program
+    in Stata to find best standardized match.
+
+7)  Geocoding was done by submitting the files to the Environmental
     Systems Research Institute. After address was assigned to latitude
     and longitude coordinates, the location could then be linked to
     other geographical area units such as Census tracts.
 
-6)  Estimation of prevalence: case outcome was classified as eviction if
+8)  Estimation of prevalence: case outcome was classified as eviction if
     it contained a record of either money or forcible detainer judgement
     for plaintif. Case volume fluctuation across states (recorded
     evication data were not uniform across state and time, some areas
@@ -322,11 +324,11 @@ California, New Jersey, Nevada, Ohio and Oregon.
     were standardized by comparing data to eviction case volume
     statistics received directly from state and local courts.
 
-7)  To calculate eviction and filing rates, the number of evictions and
+9)  To calculate eviction and filing rates, the number of evictions and
     filings were divided by the number of renter-occupied households in
     that area.
 
-##### **by Individual** 
+##### **by Individual**
 
 Stata dofile of all the cleaning is located in box.
 
@@ -349,7 +351,9 @@ Stata dofile of all the cleaning is located in box.
 5)  The 'cities', 'counties', 'states' files in the downloaded data
     folder were modified, the 'parentlocation' variable was renamed
     state and the modified files were stored in the 'Cleaned DTA
-    Datasets' as well as 'Cleaned CSV Datasets" \### InfoUSA {-}
+    Datasets' as well as 'Cleaned CSV Datasets"
+
+### InfoUSA {.unnumbered}
 
 ### Corelogic {.unnumbered}
 
