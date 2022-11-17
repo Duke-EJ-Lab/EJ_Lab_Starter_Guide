@@ -166,12 +166,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#file-naming"><i class="fa fa-check"></i>File Naming</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#object-naming"><i class="fa fa-check"></i>Object naming</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#closing-out-a-project"><i class="fa fa-check"></i>Closing out a Project</a>
-<ul>
+<li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#closing-out-a-project"><i class="fa fa-check"></i>Closing out a Project</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#databank"><i class="fa fa-check"></i>Contributing to the lab data bank</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#contpackage"><i class="fa fa-check"></i>Contributing to the lab R package</a></li>
 <li class="chapter" data-level="" data-path="workflow.html"><a href="workflow.html#guide"><i class="fa fa-check"></i>Contributing to (this!) lab onboarding doc</a></li>
-</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html"><i class="fa fa-check"></i>Data Library</a>
 <ul>
@@ -323,8 +321,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Delete (or archive if you want to be safe) all the processed data in your project folder and re-run your code straight from the downloaded data. Make sure your results haven’t changed.</p></li>
 <li><p>Congrats! You should now have a project that can be run by anyone with access to your GitHub repo and the Duke Box folder. To make sure someone on another computer can use your code, check if there’s someone in lab can try to re-run your code. It’s common that issues come up (even when we’re being really careful) so try to account for the fact that it will likely take a while to de-bug some issues, rather than just quickly hitting run on each file. Make sure the person can dedicate at least a few hours to it.</p></li>
 </ol>
-<div id="databank" class="section level3 unnumbered hasAnchor">
-<h3>Contributing to the lab data bank<a href="workflow.html#databank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="databank" class="section level2 unnumbered hasAnchor">
+<h2>Contributing to the lab data bank<a href="workflow.html#databank" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you have a dataset that’s of interest for the rest of the lab and you want to add it to the data bank there’s only a few steps to follow!</p>
 <ol style="list-style-type: decimal">
 <li><p>Decide where you are going to store your raw data. Try to minimize the number of total folders in the data bank, but create a new folder where logically necessary. For example, if you’re trying to save a spatial boundary file of states, rather than creating a new top level folder called <code>raw/state_boundaries_us</code>, instead you can add it to the pre-existing <code>raw/boundaries</code> folder, and just name the file <code>states</code>.</p></li>
@@ -352,13 +351,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Run the code! If you’ve checked that the paths match the Box location, the new cleaned file should appear in the <code>Box/clean</code> folder.</p></li>
 </ol>
 </div>
-<div id="contpackage" class="section level3 unnumbered hasAnchor">
-<h3>Contributing to the lab R package<a href="workflow.html#contpackage" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="contpackage" class="section level2 unnumbered hasAnchor">
+<h2>Contributing to the lab R package<a href="workflow.html#contpackage" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The lab R package is currently minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you’re writing a block of code that does a similar task over and over, consider if that’s something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the <a href="tools-to-know-about.html#package">lab package section</a> of this document!</p>
 <p>A step by step guide on how to contribute to the lab R package can be found in the <a href="https://github.com/Duke-EJ-Lab/lab.tools">package repo</a> itself!</p>
 </div>
-<div id="guide" class="section level3 unnumbered hasAnchor">
-<h3>Contributing to (this!) lab onboarding doc<a href="workflow.html#guide" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="guide" class="section level2 unnumbered hasAnchor">
+<h2>Contributing to (this!) lab onboarding doc<a href="workflow.html#guide" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
 <li><p>Find the <a href="https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide">GitHub repo</a> that contains all the documents for this site, and get it locally.</p></li>
 <li><p>Install the <code>bookdown</code> package, as well as the packages used in the book (<code>formatR</code>, <code>readr</code>, <code>raster</code>, and <code>tidyverse</code>)</p></li>
@@ -375,7 +374,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will update automatically. Beware it can take a while for changes to show up.</li>
 </ol>
 
-</div>
 </div>
 </div>
             </section>

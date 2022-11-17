@@ -123,7 +123,7 @@ There's lots of ways of re-organizing your code at the end of a project, and you
 
 6) Congrats! You should now have a project that can be run by anyone with access to your GitHub repo and the Duke Box folder. To make sure someone on another computer can use your code, check if there's someone in lab can try to re-run your code. It's common that issues come up (even when we're being really careful) so try to account for the fact that it will likely take a while to de-bug some issues, rather than just quickly hitting run on each file. Make sure the person can dedicate at least a few hours to it. 
 
-### Contributing to the lab data bank {-#databank}
+## Contributing to the lab data bank {-#databank}
 
 If you have a dataset that's of interest for the rest of the lab and you want to add it to the data bank there's only a few steps to follow! 
 
@@ -158,13 +158,13 @@ If you have a dataset that's of interest for the rest of the lab and you want to
 
 6) Run the code! If you've checked that the paths match the Box location, the new cleaned file should appear in the `Box/clean` folder. 
 
-### Contributing to the lab R package {-#contpackage}
+## Contributing to the lab R package {-#contpackage}
 
 The lab R package is currently minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you're writing a block of code that does a similar task over and over, consider if that's something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the [lab package section](#package) of this document!
 
 A step by step guide on how to contribute to the lab R package can be found in the [package repo](https://github.com/Duke-EJ-Lab/lab.tools) itself! 
 
-### Contributing to (this!) lab onboarding doc {-#guide}
+## Contributing to (this!) lab onboarding doc {-#guide}
 
 1) Find the [GitHub repo](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide) that contains all the documents for this site, and get it locally. 
 
