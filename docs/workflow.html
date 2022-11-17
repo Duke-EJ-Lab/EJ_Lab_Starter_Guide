@@ -249,17 +249,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="4" style="list-style-type: decimal">
 <li><strong>Create a data folder inside the <code>projects</code> folder of the Duke Box</strong> with the same name as you chose for your GitHub repository. This is going to hold all the data that is unique to your project - that covers any data sources that aren’t likely to be helpful for future projects or any of your processed data. It’s recommended you follow something similar to the structure shown here, where you separate the <code>raw</code> and <code>clean</code> data within your project folder.</li>
 </ol>
-<p><img src="images/box_structure.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/box_structure.png" width="735" style="display: block; margin: auto;" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li><strong>Add the data you need to your Box project folder.</strong> Check the lab data bank to see if we have anything already cleaned that you can use - you can load anything useful directly from the <code>clean</code> folder, no need to copy it to your own folder. For data you add, add documentation on that data to your Box. It’s most important to document the raw data that you download, so that anyone coming in to your code at a later date will be able to understand the context of the data, know how to update it, and be able to find documentation from the data originator. Add to the README in your Box folder at a minimum <strong>when</strong> the data was downloaded, <strong>how</strong> to obtain the data (a link to download/an email for who to contact to get access), and <strong>what</strong> the data means (a data dictionary) if the data dictionary is not readily accessible either in your folder or at the link to download the data. Here’s an example of of what the README might look like: a layout of the folder structure, followed by the <strong>when/how/what</strong> of each file. This is an iterative process! Every time you need new data, you’ll come back to update the data documentation.</li>
 </ol>
-<p><img src="images/data_documentation.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/data_documentation.png" width="940" style="display: block; margin: auto;" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li><p><strong>Write some code.</strong> Make sure to save even the exploratory data analysis (EDA) work you’re doing - there’s an <code>eda</code> folder in your GitHub repository that you can save out intermediate files in.</p></li>
 <li><p><strong>Commit your code to GitHub.</strong> Any time you make a change to your code, commit the change to the online version of the code. It’s especially important to do this very often if you are collaborating with others. Good times to commit are: if you just solved a problem you’ve been working on, or if you’re going to stop actively working on it (eg going to class, working on a paper). To commit, go to GitHub Desktop and add a commit message that explains what you’re adding, then hit the blue “Commit” button on the bottom left. Once you’ve done that, hit the black “Push origin” button on the top right.</p></li>
 </ol>
-<p><img src="images/github_commit.png" style="display: block; margin: auto;" /></p>
-<p><img src="images/github_push.png" style="display: block; margin: auto;" /></p>
+<p><img src="images/github_commit.png" width="962" style="display: block; margin: auto;" /></p>
+<p><img src="images/github_push.png" width="962" style="display: block; margin: auto;" /></p>
 <ol start="8" style="list-style-type: decimal">
 <li><strong>Comment, document, and iterate!</strong> Go back and forth between writing code, committing it, and cleaning up your code + folder structure as you work through the project - it’s inevitable you’ll be trying different methods, different data sources, finding issues that makes you go through old work, and you want to keep the documentation as clean and minimal as you can throughout the process. Keep any analysis that informed your ultimate decisions and make sure it’s commented, but drop code and data that’s no longer relevant.</li>
 </ol>
@@ -327,7 +327,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Contributing to the lab data bank<a href="workflow.html#databank" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you have a dataset that’s of interest for the rest of the lab and you want to add it to the data bank there’s only a few steps to follow!</p>
 <ol style="list-style-type: decimal">
-<li><p>Write the documentation for the raw data following the following format. Add it to the <a href="data.html#data">data</a> section of this document, making sure to follow the instructions in the <a href="workflow.html#guide">contributing to the guide</a> section.</p>
+<li><p>Decide where you are going to store your raw data. Try to minimize the number of total folders in the data bank, but create a new folder where logically necessary. For example, if you’re trying to save a spatial boundary file of states, rather than creating a new top level folder called <code>raw/state_boundaries_us</code>, instead you can add it to the pre-existing <code>raw/boundaries</code> folder, and just name the file <code>states</code>.</p></li>
+<li><p>Write the documentation for the raw data following the following format. Add it to the <a href="data.html#data">data</a> section of this document, making sure to follow the instructions in the <a href="workflow.html#guide">contributing to the guide</a> section. That section will give you information on how to access the code that builds this website, make edits, and then make sure your edits are on the website.</p>
 <ul>
 <li><p><code>#### path/to/data {-}</code></p></li>
 <li><p><strong>Cleaned formats</strong>: This is a great place to load in the data and print out the first few rows so people can get a sense of what the data shows. Include a description of what an observation is.</p></li>
@@ -340,15 +341,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p><strong>Where</strong>: A link to where the data is sourced. The data in the raw folder should be directly downloadable from where you link to, with no changes to it. If the data isn’t publicly available, give info of who you reached out to and the exact format they specified upon giving it to you. Be as precise as you can!</p></li>
 <li><p><strong>When</strong>: When did you download the data? This is important in case a new release comes out.</p></li>
 </ul></li>
-<li><p>Once the data documentation is all there, you can move the raw file to the Box.</p></li>
-<li><p>Clean up the code you used to create the “clean” version of the data. Make sure to:</p>
+<li><p>Once the data documentation is all uploaded to this website, you can move the raw data file to the Box. Please don’t edit the data file name from the original downloaded name, and use snake case (no capitals, and an underscore to replace spaces) to name folders.</p></li>
+<li><p>If there is a cleaned version of the data, clean up the code you used to create the “clean” version of the data. To make sure that anyone else in the lab can run and understand your code, make sure the code:</p>
 <ul>
-<li>include comments describing the methods of cleaning</li>
-<li>it directly reads the data from the newly saved location</li>
-<li>it directly saves the data to the <code>Box/clean</code> folder, create a relevant subfolder if you’re going to save several files from the same source data, or save in an existing subfolder if it feels correct.</li>
+<li>includes comments describing the methods of cleaning</li>
+<li>directly reads the data from the newly saved location in <code>Box/raw</code></li>
+<li>directly saves the data to the relevant subfolder in the <code>Box/clean</code> folder.</li>
 </ul></li>
 <li><p>Name the file informatively and put the code in the <a href="https://github.com/Duke-EJ-Lab/general_cleaning"><code>general_cleaning</code></a> GitHub repo. Commit and push your code.</p></li>
-<li><p>Run the code! If you’ve checked that the paths match the Box location, it should just pop up</p></li>
+<li><p>Run the code! If you’ve checked that the paths match the Box location, the new cleaned file should appear in the <code>Box/clean</code> folder.</p></li>
 </ol>
 </div>
 <div id="contpackage" class="section level3 unnumbered hasAnchor">
@@ -369,6 +370,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>The site displays <code>html</code> files that are created from the <code>Rmd</code> files, so you need to make sure the html files reflect your changes. Use the <code>bookdown</code> package to render the book. Make sure you’re in the directory containing the <code>Rmd</code> files when you run this.</p></li>
 </ol>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="workflow.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">render_book</span>()</span></code></pre></div>
+<p>The book will not render if the data read in for the “Data” section can’t be found, so you’ll need to make sure you have Box set up on your computer, and that the <code>data_path</code> variable in Chapter 4 links to the <code>ejlab</code> folder on your local computer.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will update automatically. Beware it can take a while for changes to show up.</li>
 </ol>
