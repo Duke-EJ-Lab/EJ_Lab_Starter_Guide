@@ -55,6 +55,26 @@ contains
      │   │   └── RSEI_county_year[YYYY]_consistent2011_lower48.csv
      │   └── tract
      │       └── RSEI_tract_year[YYYY]_consistent2011_lower48.csv
+     |__eviction_lab_data
+     |   |__block_groups_by_state
+     |   |   |_alabama_blocks.csv
+     |   |   |_alaska_blocks.csv (etc.)
+     |   |__tracts_groups_by_state
+     |   |   |_alabama_tracts.csv
+     |   |   |_alaska_tracts.csv (etc.)
+     |   |__cleaned_csv_datasets
+     |   |   |_blocks.csv
+     |   |   |_cities.csv
+     |   |   |_counties.csv
+     |   |   |_states.csv
+     |   |   |_tracts.csv
+     |   |__cleaned_dta_datasets
+     |       |_blocks.dta
+     |       |_cities.dta
+     |       |_counties.dta
+     |       |_states.dta
+     |       |_tracts.dta
+     |
      ├── raw
      │   ├── boundaries
      │   │   ├── blockgroups
@@ -80,6 +100,23 @@ contains
      │   │   ├── chemical_data_rsei_v2310.csv
      │   │   ├── facility_data_rsei_v2310.csv
      │   │   └── zipcode
+     |   |__eviction_lab_data
+     |   |   |_downloaded_data
+     |   |   |  |_all.csv
+     |   |   |  |_block_groups.csv
+     |   |   |  |_cities.csv
+     |   |   |  |_counties.csv
+     |   |   |  |_national.csv
+     |   |   |  |_states.csv
+     |   |   |  |_tracts.csv
+     |   |   |_dta_of_downloaded_data
+     |   |   |  |_all.dta
+     |   |   |  |_block_groups.dta
+     |   |   |  |_cities.dta
+     |   |   |  |_counties.dta
+     |   |   |  |_national.dta
+     |   |   |  |_states.dta
+     |   |   |  |_tracts.dta   
 
 ## Environmental Data {.unnumbered}
 
