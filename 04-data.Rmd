@@ -10,9 +10,8 @@ editor_options:
 library(readr)
 library(raster)
 library(tidyverse)
-# data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", 
-#                       "Box-Box", "adhoc_ejlab", "ejlab")
-data_path = ("C:/Users/Wendy/Box/adhoc_ejlab/ejlab")
+data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", "Box-Box", "adhoc_ejlab", "ejlab")
+# data_path = ("C:/Users/Wendy/Box/adhoc_ejlab/ejlab")
 ```
 
 ## Documentation format {#docformat .unnumbered}
@@ -322,7 +321,7 @@ California, New Jersey, Nevada, Ohio and Oregon.
 
 **Cleaning**
 
-##### **by Eviction Lab**
+##### **by Eviction Lab** {-}
 
 1)  Regular expressions were used to to match cases and names.
     (Levenshtein distance between pariwise combination was used as
@@ -365,7 +364,7 @@ California, New Jersey, Nevada, Ohio and Oregon.
     filings were divided by the number of renter-occupied households in
     that area.
 
-##### **by Individual**
+##### **by Individual** {-}
 
 Stata dofile of all the cleaning is located in box.
 

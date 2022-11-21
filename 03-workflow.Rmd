@@ -123,11 +123,13 @@ There's lots of ways of re-organizing your code at the end of a project, and you
 
 6) Congrats! You should now have a project that can be run by anyone with access to your GitHub repo and the Duke Box folder. To make sure someone on another computer can use your code, check if there's someone in lab can try to re-run your code. It's common that issues come up (even when we're being really careful) so try to account for the fact that it will likely take a while to de-bug some issues, rather than just quickly hitting run on each file. Make sure the person can dedicate at least a few hours to it. 
 
-### Contributing to the lab data bank {-#databank}
+## Contributing to the lab data bank {-#databank}
 
 If you have a dataset that's of interest for the rest of the lab and you want to add it to the data bank there's only a few steps to follow! 
 
-1) Write the documentation for the raw data following the following format. Add it to the [data](#data) section of this document, making sure to follow the instructions in the [contributing to the guide](#guide) section. 
+1) Decide where you are going to store your raw data. Try to minimize the number of total folders in the data bank, but create a new folder where logically necessary. For example, if you're trying to save a spatial boundary file of states, rather than creating a new top level folder called `raw/state_boundaries_us`, instead you can add it to the pre-existing `raw/boundaries` folder, and just name the file `states`. 
+
+2) Write the documentation for the raw data following the following format. Add it to the [data](#data) section of this document, making sure to follow the instructions in the [contributing to the guide](#guide) section. That section will give you information on how to access the code that builds this website, make edits, and then make sure your edits are on the website. 
 
     * `#### path/to/data {-}`
 
@@ -145,24 +147,24 @@ If you have a dataset that's of interest for the rest of the lab and you want to
 
     * **When**: When did you download the data? This is important in case a new release comes out. 
 
-2) Once the data documentation is all there, you can move the raw file to the Box. 
+3) Once the data documentation is all uploaded to this website, you can move the raw data file to the Box. Please don't edit the data file name from the original downloaded name, and use snake case (no capitals, and an underscore to replace spaces) to name folders. 
 
-3) Clean up the code you used to create the "clean" version of the data. Make sure to:
-    * include comments describing the methods of cleaning
-    * it directly reads the data from the newly saved location
-    * it directly saves the data to the `Box/clean` folder, create a relevant subfolder if you're going to save several files from the same source data, or save in an existing subfolder if it feels correct. 
+4) If there is a cleaned version of the data, clean up the code you used to create the "clean" version of the data. To make sure that anyone else in the lab can run and understand your code, make sure the code:
+    * includes comments describing the methods of cleaning
+    * directly reads the data from the newly saved location in `Box/raw`
+    * directly saves the data to the relevant subfolder in the `Box/clean` folder. 
     
-4) Name the file informatively and put the code in the [`general_cleaning`](https://github.com/Duke-EJ-Lab/general_cleaning) GitHub repo. Commit and push your code. 
+5) Name the file informatively and put the code in the [`general_cleaning`](https://github.com/Duke-EJ-Lab/general_cleaning) GitHub repo. Commit and push your code. 
 
-5) Run the code! If you've checked that the paths match the Box location, it should just pop up 
+6) Run the code! If you've checked that the paths match the Box location, the new cleaned file should appear in the `Box/clean` folder. 
 
-### Contributing to the lab R package {-#contpackage}
+## Contributing to the lab R package {-#contpackage}
 
 The lab R package is currently minimal, but contains some functions that are useful to some frequent data cleaning tasks that come up across lab projects. If you're writing a block of code that does a similar task over and over, consider if that's something that might be useful to just call as a function on your data, and feel free to add it to the lab package! If you do, add a bullet to the [lab package section](#package) of this document!
 
 A step by step guide on how to contribute to the lab R package can be found in the [package repo](https://github.com/Duke-EJ-Lab/lab.tools) itself! 
 
-### Contributing to (this!) lab onboarding doc {-#guide}
+## Contributing to (this!) lab onboarding doc {-#guide}
 
 1) Find the [GitHub repo](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide) that contains all the documents for this site, and get it locally. 
 
@@ -175,10 +177,12 @@ library(bookdown)
 
 3) Make changes to whichever of the `Rmd` files you wanted to update. 
 
-4) The site displays `html` files that are created from the `Rmd` files, so you need to make sure the html files reflect your changes. Use the `bookdown` package to render the book. Make sure you're in the directory containing the `Rmd` files when you run this.
+4) The site displays `html` files that are created from the `Rmd` files, so you need to make sure the html files reflect your changes. Use the `bookdown` package to render the book. Make sure you're in the directory containing the `Rmd` files when you run this. 
 
 ```{r, eval = F}
 render_book()
 ```
+
+The book will not render if the data read in for the "Data" section can't be found, so you'll need to make sure you have Box set up on your computer, and that the `data_path` variable in Chapter 4 links to the `ejlab` folder on your local computer. 
 
 5) Commit (and push) your changes, so they are stored on the GitHub website instead of just your local computer, and the changes will update automatically. Beware it can take a while for changes to show up. 
