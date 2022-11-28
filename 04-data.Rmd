@@ -310,18 +310,25 @@ individual level court ordered eviction records. The eviction lab also
 purchased data sets of public eviction records from two companies,
 LexisNexis Risk Solutions and American Information Research Services
 Inc. They obtained about 66.5 million records from LexisNexis and 10.6
-million records from AIRS.
+million records from AIRS. United States.
 
-**Where**: United States. Eviction lab's own bulk requests were from all
-50 states. LexisNexis included records from all states except North and
-South Dakota, AIRS provides eviction records from 6 states, Arizona,
-California, New Jersey, Nevada, Ohio and Oregon.
+Eviction lab's own bulk requests were from all 50 states. LexisNexis
+included records from all states except North and South Dakota, AIRS
+provides eviction records from 6 states, Arizona, California, New
+Jersey, Nevada, Ohio and Oregon.
+
+**Where**:
+
+[Eviction Lab Data Downloads](https://data-downloads.evictionlab.org/)
+A version of the data can be found from the above link, however the data
+from this links appears to be have more NAs than the data in the EJ
+folder, it seems those NAs were imputed in someway.
 
 **When**: Data from year 2000 and 2016.
 
 **Cleaning**
 
-##### **by Eviction Lab** {-}
+##### **by Eviction Lab** {.unnumbered}
 
 1)  Regular expressions were used to to match cases and names.
     (Levenshtein distance between pariwise combination was used as
@@ -364,7 +371,7 @@ California, New Jersey, Nevada, Ohio and Oregon.
     filings were divided by the number of renter-occupied households in
     that area.
 
-##### **by Individual** {-}
+##### **by Individual** {.unnumbered}
 
 Stata dofile of all the cleaning is located in box.
 
