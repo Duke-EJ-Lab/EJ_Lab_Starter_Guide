@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Data Library | Duke EJ Lab</title>
   <meta name="description" content="This is a resource for new, current, and graduated members of the Duke EJ Lab. It helps get you oriented to the norms of the lab (where do we store data?), the existing resources of the lab (we already have data on toxic spills clean and ready to use?!), and gives a space for everyone to contribute their own lessons learned and build institutional knowledge." />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Data Library | Duke EJ Lab" />
   <meta property="og:type" content="book" />
@@ -179,6 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#rsei"><i class="fa fa-check"></i>RSEI</a></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#pm-2.5"><i class="fa fa-check"></i>PM 2.5</a></li>
+<li class="chapter" data-level="" data-path="data.html"><a href="data.html#brownfields"><i class="fa fa-check"></i>Brownfields</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="data.html"><a href="data.html#social-data"><i class="fa fa-check"></i>Social Data</a>
 <ul>
@@ -315,6 +316,11 @@ contains</p>
  |   |   |  |_national.csv
  |   |   |  |_states.csv
  |   |   |  |_tracts.csv
+ |   |__brownfield
+ |   |   |__nc_brownfields_boundary_view
+ |   |   |  |__ncbp_project_poly.shp
+ |   |   |__nc_brownfields_location_view
+ |   |   |  |__ncbp_project_point.shp
  |   |   |_dta_of_downloaded_data
  |   |   |  |_all.dta
  |   |   |  |_block_groups.dta
@@ -457,7 +463,31 @@ currently covers 2018-2000 and is at a yearly average level.</p>
 <p><strong>Where:</strong> Information on the different products can be found
 <a href="https://sites.wustl.edu/acag/datasets/surface-pm2-5/">here</a>. We have
 <code>V4.NA.03</code> data.</p>
-<p><strong>When:</strong> Downloaded 10/9/2022.</p>
+<p><strong>When:</strong> Downloaded 10/6/2022.</p>
+</div>
+</div>
+<div id="brownfields" class="section level3 unnumbered hasAnchor">
+<h3>Brownfields<a href="data.html#brownfields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="rawbrownfieldsnc_brownfields_boundary_viewncbp_project_poly.shp" class="section level4 unnumbered hasAnchor">
+<h4>raw/brownfields/nc_brownfields_boundary_View/ncbp_project_poly.shp<a href="data.html#rawbrownfieldsnc_brownfields_boundary_viewncbp_project_poly.shp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cleaned formats</strong>: NA</p>
+<p><strong>What</strong>: The shape file contains information on the boundries of brownfileds in the state of North Carolina. Contains Brownfield name, address and basic stats such as Acreage and Manager name on the Brownfield location, the geometry variable allows for visualization.
+According to the site description “This feature service is for viewing Brownfields projects content and is updated continuously. This data set shows boundaries of Brownfields Projects that have entered into the program to receive a Brownfields Agreement. The boundaries and areas shown reflect the current status of the project in its progression towards having a recorded Notice of Brownfields Property with a finalized Brownfields Agreement.”
+There are 1,125 records, and the data is public.
+<strong>Where</strong>:
+The data is sourced from the North Carolina Department of Environmental Quality. THere are also CSV, KML and GeoJSON versions of the file on website.
+<a href="https://data-ncdenr.opendata.arcgis.com/datasets/ncdenr::nc-brownfields-boundary-view/explore?location=35.173243%2C-79.903564%2C7.88">Download</a></p>
+<p><strong>When</strong>: 12/06/22</p>
+</div>
+<div id="rawbrownfieldsnc_brownfields_location_viewncbp_project_point.shp" class="section level4 unnumbered hasAnchor">
+<h4>raw/brownfields/nc_brownfields_Location_view/ncbp_project_point.shp<a href="data.html#rawbrownfieldsnc_brownfields_location_viewncbp_project_point.shp" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Cleaned formats</strong>: NA</p>
+<p><strong>What</strong>: The shape file contains information on the site locations of brownfileds in the state of North Carolina. Also contains Brownfield name, address and basic stats such as Acreage and Manager name on the Brownfield location, the geometry variable allows for visualization.
+There are 1,345 records, and the data is public.</p>
+<p><strong>Where</strong>:
+The data is sourced from the North Carolina Department of Environmental Quality. THere are also CSV, KML and GeoJSON versions of the file on website.</p>
+<p><a href="https://data-ncdenr.opendata.arcgis.com/datasets/ncdenr::nc-brownfields-location-view/explore?location=35.195168%2C-79.947510%2C8.15">Download</a></p>
+<p><strong>When</strong>: 12/06/22</p>
 </div>
 </div>
 </div>
@@ -492,11 +522,16 @@ individual level court ordered eviction records. The eviction lab also
 purchased data sets of public eviction records from two companies,
 LexisNexis Risk Solutions and American Information Research Services
 Inc. They obtained about 66.5 million records from LexisNexis and 10.6
-million records from AIRS.</p>
-<p><strong>Where</strong>: United States. Eviction lab’s own bulk requests were from all
-50 states. LexisNexis included records from all states except North and
-South Dakota, AIRS provides eviction records from 6 states, Arizona,
-California, New Jersey, Nevada, Ohio and Oregon.</p>
+million records from AIRS. United States.</p>
+<p>Eviction lab’s own bulk requests were from all 50 states. LexisNexis
+included records from all states except North and South Dakota, AIRS
+provides eviction records from 6 states, Arizona, California, New
+Jersey, Nevada, Ohio and Oregon.</p>
+<p><strong>Where</strong>:</p>
+<p><a href="https://data-downloads.evictionlab.org/">Eviction Lab Data Downloads</a> A
+version of the data can be found from the above link, however the data
+from this links appears to be have more NAs than the data in the EJ
+folder, it seems those NAs were imputed in someway.</p>
 <p><strong>When</strong>: Data from year 2000 and 2016.</p>
 <p><strong>Cleaning</strong></p>
 <div id="by-eviction-lab" class="section level5 unnumbered hasAnchor">
