@@ -9,9 +9,10 @@ editor_options:
 ```{r, echo = F, results = "hide", warning = F, message = F}
 library(readr)
 library(raster)
-library(tidyverse)
-data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", "Box-Box", "adhoc_ejlab", "ejlab")
-# data_path = ("C:/Users/Wendy/Box/adhoc_ejlab/ejlab")
+
+# data_path = file.path("", "Users", "amd112", "Library", "CloudStorage", "Box-Box", "adhoc_ejlab", "ejlab")
+
+data_path = ("C:/Users/Wendy/Box/adhoc_ejlab/ejlab")
 ```
 
 ## Documentation format {#docformat .unnumbered}
@@ -108,6 +109,11 @@ contains
      |   |   |  |_national.csv
      |   |   |  |_states.csv
      |   |   |  |_tracts.csv
+     |   |__brownfield
+     |   |   |__nc_brownfields_boundary_view
+     |   |   |  |__ncbp_project_poly.shp
+     |   |   |__nc_brownfields_location_view
+     |   |   |  |__ncbp_project_point.shp
      |   |   |_dta_of_downloaded_data
      |   |   |  |_all.dta
      |   |   |  |_block_groups.dta
@@ -275,7 +281,42 @@ currently covers 2018-2000 and is at a yearly average level.
 [here](https://sites.wustl.edu/acag/datasets/surface-pm2-5/). We have
 `V4.NA.03` data.
 
-**When:** Downloaded 10/9/2022.
+**When:** Downloaded 10/6/2022.
+
+### Brownfields {.unnumbered}
+
+#### raw/brownfields/nc_brownfields_boundary_View/ncbp_project_poly.shp {.unnumbered}
+
+**Cleaned formats**: NA
+
+**What**: The shape file contains information on the boundries of brownfileds in the state of North Carolina. Contains Brownfield name, address and basic stats such as Acreage and Manager name on the Brownfield location, the geometry variable allows for visualization. 
+According to the site description "This feature service is for viewing Brownfields projects content and is updated continuously. This data set shows boundaries of Brownfields Projects that have entered into the program to receive a Brownfields Agreement. The boundaries and areas shown reflect the current status of the project in its progression towards having a recorded Notice of Brownfields Property with a finalized Brownfields Agreement. "
+There are 1,125 records, and the data is public.
+**Where**:
+The data is sourced from the North Carolina Department of Environmental Quality. THere are also CSV, KML and GeoJSON versions of the file on website.
+[Download](https://data-ncdenr.opendata.arcgis.com/datasets/ncdenr::nc-brownfields-boundary-view/explore?location=35.173243%2C-79.903564%2C7.88)
+
+**When**: 12/06/22
+
+#### raw/brownfields/nc_brownfields_Location_view/ncbp_project_point.shp {.unnumbered}
+
+
+
+
+**Cleaned formats**: NA
+
+**What**: The shape file contains information on the site locations of brownfileds in the state of North Carolina. Also contains Brownfield name, address and basic stats such as Acreage and Manager name on the Brownfield location, the geometry variable allows for visualization. 
+There are 1,345 records, and the data is public.
+
+**Where**:
+The data is sourced from the North Carolina Department of Environmental Quality. THere are also CSV, KML and GeoJSON versions of the file on website.
+
+[Download](https://data-ncdenr.opendata.arcgis.com/datasets/ncdenr::nc-brownfields-location-view/explore?location=35.195168%2C-79.947510%2C8.15)
+
+**When**: 12/06/22
+
+
+
 
 ## Social Data {.unnumbered}
 
@@ -319,8 +360,8 @@ Jersey, Nevada, Ohio and Oregon.
 
 **Where**:
 
-[Eviction Lab Data Downloads](https://data-downloads.evictionlab.org/)
-A version of the data can be found from the above link, however the data
+[Eviction Lab Data Downloads](https://data-downloads.evictionlab.org/) A
+version of the data can be found from the above link, however the data
 from this links appears to be have more NAs than the data in the EJ
 folder, it seems those NAs were imputed in someway.
 
