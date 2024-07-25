@@ -2,11 +2,50 @@
 
 ## Lab structure {-}
 
-The lab consists of two Principal Investigators (PIs): Chris Timmins (a professor in Econ) and Kay Jowers (the Director of the Just Environments program at the Nicholas Institute). There's currently a staff Analyst, Anne Driscoll. 
+The lab consists of one Principal Investigator (PI), Kay Jowers (the Director of the Just Environments program at the Nicholas Institute and Kenan Institute), one staff as EJ Lab manager, faculty research partners, and graduate and undergraduate paid student research assistants. 
 
-Everybody meets once a week in person so we can all get a sense of what's going on with everyone in the lab. Meetings start with a rose/bud/thorn check-in, followed by a presentation by a lab member, a lit review by another lab member, and a factoid or figure share by a third lab member. 
+The research lab consisting of students, Dr. Jowers, and lab manager meet weekly in person.  Meetings start with a rose/bud/thorn check-in, followed by a presentation by a lab member, and a factoid or figure share by a third lab member. 
 
-Mostly, each student is working on one project in collaboration with one or both of the PIs on a relatively long term basis. Research meetings between the lab PIs and students help define the structure and goals of the project, help to move research forward and troubleshoot things that come up throughout the process, but most work happens pretty independently. 
+Mostly, each student is working on one project in collaboration with the PI or other faculty partner on a relatively long term basis. Research meetings between the lab PIs and students help define the structure and goals of the project, help to move research forward and troubleshoot things that come up throughout the process, but most work happens pretty independently. 
+
+## How to Onboard to EJ Lab{-}
+The following is important for any research affiliate (faculty or otherwise) or student.
+
+### Tasks for research affiliates and students
+* Ensure you have duo/multi-factor authentication.  See the following two links from OIT for more information:
+** https://oit.duke.edu/service/duo/
+** Registering a device with Duo: https://idms-mfa.oit.duke.edu/mfa/home
+* Install VPN: 
+** To install VPN on mac, follow these instructions from Duke: https://vcm.duke.edu/help/15
+***Windows: In Windows XP, Vista, and Windows 7, RDC is located under Start > All Programs > Accessories > Remote Desktop Connection. To access RDC in Windows 8, press WIN+F > Apps > Windows Accessories > Remote Desktop Client.
+***Mac OS X: Older versions of Remote Desktop will cause errors. You can get the most recent version at the app store: https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466?mt=12 (link is external) (or search for Microsoft Remote Desktop for Mac). Some users have reported they needed to delete their older version for the new version to work properly.
+***Linux/Unix: The most commonly used client is called rdesktop, included in most distributions of Linux. If it is not present, it can be downloaded from a third party site: http://www.rdesktop.org (link is external).
+
+
+**Connect to VPN: Instructions from Duke: https://oit.duke.edu/help/articles/kb0028460/
+***Multi-factor authentication is required when connecting to Duke's virtual private network (VPN). Do the following:
+***Open the Cisco AnyConnect application or visit https://portal.duke.edu
+***Select the desired VPN and click Connect.
+Vpn.duke.edu
+***Enter your NetID and password and click OK.
+***In the MFA Option field, do one of the following:
+****Enter "1" - To receive push notification to your device's mobile app. This is the most portable option and also allows for access if you don’t have service or Wi-Fi in your area. 
+****Enter "2" - To authenticate by receiving a phone call.
+****Enter "3" - To receive ten temporary passcodes via text message. Each passcode may be used once -- they expire 72 hours after they are issued. Enter one of those codes into the MFA Option field.
+****To use a YubiKey, connect the YubiKey to your computer, put your cursor in the MFA Option field, and touch the YubiKey's sensor. A code will automatically be generated.
+***Click Continue. You are connected to the VPN.
+
+
+### Tasks for non-Duke-affiliated research affiliates:
+* Guest affiliate account: Kay Jowers or lab manager should request a guest account from Duke OIT: https://accounts.oit.duke.edu/sponsor .  The affiliate will receive an ameil
+
+### Tasks for EJ Lab staff
+* Research Toolkits - set permissions
+* request guest account, if applicable (see above)
+* if any IT links are outdated above, email IT and request updated information
+
+
+
 
 ## Code Organization {-}
 
