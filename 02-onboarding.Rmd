@@ -22,7 +22,7 @@ Specifically, MFA is required when connecting to Duke's virtual private network 
 
 * **Download Remote Desktop Application**: See instructions for Windows, Max, or Linux here from Duke IT: https://vcm.duke.edu/help/15
 
-* **Connect to EJ Lab virtual machine**: Open the Remote Desktop Application, click "+ Add" to add a new PC. The PC name is **res-ejlab-pap1.oit.duke.edu**.  Your netid and password are required to login.
+* **Connect to EJ Lab virtual machine**: Open the Remote Desktop Application, click "+ Add" to add a new PC. The PC name is **see this link**.  Your netid and password are required to login.
 
 * **OPTIONAL - Git account**: For users who will be coding, ensure you have a Git account and request access from EJLab staff.
 
@@ -60,10 +60,10 @@ Remote computer is:
 
 Network attached storage drives are:
 
-(1) For non-student partners: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_partners
-(2) For student and postdoctoral research: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_students
-(3) for project data: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_general
-(4) for project archive: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_archive
+(1) For non-student partners: ejlab_partners
+(2) For student and postdoctoral research: ejlab_students
+(3) for project data: ejlab_general
+(4) for project archive:ejlab_archive
 
 
 * **Data** 
