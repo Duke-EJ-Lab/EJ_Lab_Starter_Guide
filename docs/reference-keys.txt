@@ -1,3 +1,5 @@
 tasks-for-research-affiliates-and-students
 tasks-for-non-duke-affiliated-research-affiliates
 tasks-for-ej-lab-staff
+tasks-specific-to-users-with-duke-owned-computers
+tasks-for-ej-lab-staff-for-each-new-user

@@ -9,38 +9,36 @@ The research lab consisting of students, Dr. Jowers, and lab manager meet weekly
 Mostly, each student is working on one project in collaboration with the PI or other faculty partner on a relatively long term basis. Research meetings between the lab PIs and students help define the structure and goals of the project, help to move research forward and troubleshoot things that come up throughout the process, but most work happens pretty independently. 
 
 ## How to Onboard to EJ Lab{-}
-The following is important for any research affiliate (faculty or otherwise) or student.
+The following are instructions for how to begin a project with EJLab. To access our data on protected space on the virtual computer/remote desktop, you must have the following installed appropriately on your computer.  Accessing protected data from the Duke virtual computer rather than your personal laptop is of the utmost importance to be in compliance with data protection policies.
 
 ### Tasks for research affiliates and students
-* Ensure you have duo/multi-factor authentication.  See the following two links from OIT for more information:
-** https://oit.duke.edu/service/duo/
-** Registering a device with Duo: https://idms-mfa.oit.duke.edu/mfa/home
-* Install VPN: 
-** To install VPN on mac, follow these instructions from Duke: https://vcm.duke.edu/help/15
-***Windows: In Windows XP, Vista, and Windows 7, RDC is located under Start > All Programs > Accessories > Remote Desktop Connection. To access RDC in Windows 8, press WIN+F > Apps > Windows Accessories > Remote Desktop Client.
-***Mac OS X: Older versions of Remote Desktop will cause errors. You can get the most recent version at the app store: https://itunes.apple.com/us/app/microsoft-remote-desktop-10/id1295203466?mt=12 (link is external) (or search for Microsoft Remote Desktop for Mac). Some users have reported they needed to delete their older version for the new version to work properly.
-***Linux/Unix: The most commonly used client is called rdesktop, included in most distributions of Linux. If it is not present, it can be downloaded from a third party site: http://www.rdesktop.org (link is external).
+* **Duo/Multi-Factor Authentication (MFA):**  See the following two links from OIT for more information: https://oit.duke.edu/service/duo/ and registering a device with Duo: https://idms-mfa.oit.duke.edu/mfa/home
 
+* **Install VPN**: To install VPN, follow these instructions from Duke: https://vcm.duke.edu/help/15 for Windows, Max, or Linux machines
 
-**Connect to VPN: Instructions from Duke: https://oit.duke.edu/help/articles/kb0028460/
-***Multi-factor authentication is required when connecting to Duke's virtual private network (VPN). Do the following:
-***Open the Cisco AnyConnect application or visit https://portal.duke.edu
-***Select the desired VPN and click Connect.
-Vpn.duke.edu
-***Enter your NetID and password and click OK.
-***In the MFA Option field, do one of the following:
-****Enter "1" - To receive push notification to your device's mobile app. This is the most portable option and also allows for access if you don’t have service or Wi-Fi in your area. 
-****Enter "2" - To authenticate by receiving a phone call.
-****Enter "3" - To receive ten temporary passcodes via text message. Each passcode may be used once -- they expire 72 hours after they are issued. Enter one of those codes into the MFA Option field.
-****To use a YubiKey, connect the YubiKey to your computer, put your cursor in the MFA Option field, and touch the YubiKey's sensor. A code will automatically be generated.
-***Click Continue. You are connected to the VPN.
+* **Connect to VPN**: Instructions from Duke: https://oit.duke.edu/help/articles/kb0028460/  
+
+Specifically, MFA is required when connecting to Duke's virtual private network (VPN). Open the Cisco AnyConnect application or visit https://portal.duke.edu.  Then, select the desired VPN (**vpn.duke.edu**) and click Connect.  Enter your NetID and password and click OK.  In the MFA Option field, select an option to receive a push notification to your mobile device, a phone call, or temporary passcodes.  Click Continue. You are connected to the VPN.
+
+* **Download Remote Desktop Application**: See instructions for Windows, Max, or Linux here from Duke IT: https://vcm.duke.edu/help/15
+
+* **Connect to EJ Lab virtual machine**: Open the Remote Desktop Application, click "+ Add" to add a new PC. The PC name is **res-ejlab-pap1.oit.duke.edu**.  Your netid and password are required to login.
+
+* **OPTIONAL - Git account**: For users who will be coding, ensure you have a Git account and request access from EJLab staff.
 
 
 ### Tasks for non-Duke-affiliated research affiliates:
-* Guest affiliate account: Kay Jowers or lab manager should request a guest account from Duke OIT: https://accounts.oit.duke.edu/sponsor .  The affiliate will receive an ameil
+* Guest affiliate account: Kay Jowers or lab manager should request a guest account from Duke OIT: https://accounts.oit.duke.edu/sponsor .  The affiliate will receive an email to confirm.
 
-### Tasks for EJ Lab staff
-* Research Toolkits - set permissions
+### Tasks specific to users with Duke-owned computers
+* Users who have a Duke-owned computer may access EJLab network attached storage drives from their Duke-owned computer AND also by logging into the EJLab remote desktop.  Network attached storage drive links include the following and may or may not be availalbe to each user depending on the user's permissions:
+
+
+### Tasks for EJ Lab staff for each new user:
+* Research Toolkits:  Add the user's netid in Research Toolkits.  Once the user's netid is added, the netid now has permissions to log into the EJ Lab remote computer.
+* Create user folder in student or affiliate network attached storage drive
+* If appropriate, invite user to Git account, invite to specific folders as needed
+* Set Permissions on network attached storage drives for each new netid
 * request guest account, if applicable (see above)
 * if any IT links are outdated above, email IT and request updated information
 
@@ -50,6 +48,58 @@ Vpn.duke.edu
 ## Code Organization {-}
 
 Code for lab projects all lives in the [**lab GitHub**](https://github.com/Duke-EJ-Lab). Many of the repos discussed below are set to only be accessible to members of the GitHub lab group, so be sure to request access. 
+
+
+
+
+## Data Storage {-}
+
+Data are stored on network attached storage drives accessible via the EJLab remote computer.
+
+Remote computer is:
+
+Network attached storage drives are:
+
+(1) For non-student partners: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_partners
+(2) For student and postdoctoral research: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_students
+(3) for project data: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_general
+(4) for project archive: \\oit-nas-fe13dc.oit.duke.edu\data_commons-ejlab_archive
+
+
+* **Data** 
+1) `raw` is effectively a read-only folder. Data is added relatively rarely and it's important when things are added to the raw folder to document well **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary). More details about the exact way to do this are in the [workflow section](#databank).
+
+2) `clean` holds processed data that you might want to directly pull into a project. For something to get added to clean a few conditions need to be met: the raw data is in the `raw` folder, and the code that cleans it is in the lab `cleaning` github. This is only for data that might be useful for someone else on a different lab project. A dataset to include might be: the average PM for every year 2000-2020 for each county in the contiguous US. A dataset not to include might be: a panel that includes 21 day rolling mean county level PM observation that you built to purpose for a model. 
+
+* **Projects**
+
+ `projects` is the folder that contains a folder for each active or completed project. While we'd recommend a structure that at least separates your `raw` data, `clean` data and any `docs` files you have (eg literature reviews, research updates, other notes to self, etc) - this is a space each RA can do whatever they please with. 
+
+
+Below is a minimal representation of what the Box structure looks like. 
+
+```
+ejlab
+ ├── projects
+ │   ├── covid_housing_precarity
+ │   ├── covid_rental_discrimination
+ │   └── cafos_nc 
+ ├── data
+ │	 ├── raw
+ |       ├── Durham County 
+ |       ├── Durham County 
+ │	 ├── clean
+ |       ├── Durham County
+ 
+```
+
+### VM's {-}
+
+There are a few datasets that should only exist on **Duke owned machines** (the VM's) or (if they have even higher protections) that can only exist in the **protected research data network** (PRDN). Information on getting access to those spaces can be found in the onboarding section. This includes the original datasets, and ANY data that is created from it/combined with it/modeled using it, excluding simple tables that might be need to go in a publication. The datasets currently used in lab that these protections apply to are: 
+
+* InfoUSA
+
+For projects that work with a protected dataset, most of the work will occur on the VM itself. This doesn't change the workflow very much as all the tools we work through (Box and GitHub Desktop) are available through the VM as well. 
 
 ### Individual Code Organization {-}
 
@@ -68,50 +118,6 @@ There are two communal GitHub code repositories to know about:
 * The [general_cleaning](https://github.com/Duke-EJ-Lab/general_cleaning) repo, which serves to ensure we know the origin of all our communal lab data. There's more information about how to interact with the repo in the workflow section. 
 
 In addition to the code repositories, this [EJ_Lab_Starter_Guide](https://github.com/Duke-EJ-Lab/EJ_Lab_Starter_Guide) repo is something you can access and update. Details on how to do that are in the [guide](#guide) section. 
-
-
-## Data Storage {-}
-
-Lab data is stored ***only*** be in Duke Box, or one of the lab VM's - not a personal computer, not dropbox, not a hard drive under the desk in Kay's office. To get access to both of these, talk to Kay. 
-
-### Box {-#box}
-
-The EJ Lab Box has three main folders, `projects`, `clean`, and `raw`. 
-
-1) `raw` is effectively a read-only folder. Data is added relatively rarely and it's important when things are added to the raw folder to document well **when** the data was downloaded, **how** to obtain the data (a link to download/an email for who to contact to get access), and **what** the data means (a data dictionary). More details about the exact way to do this are in the [workflow section](#databank).
-
-2) `clean` holds processed data that you might want to directly pull into a project. For something to get added to clean a few conditions need to be met: the raw data is in the `raw` folder, and the code that cleans it is in the lab `cleaning` github. This is only for data that might be useful for someone else on a different lab project. A dataset to include might be: the average PM for every year 2000-2020 for each county in the contiguous US. A dataset not to include might be: a panel that includes 21 day rolling mean county level PM observation that you built to purpose for a model. 
-
-3) `projects` is the folder that contains a folder for each active or completed project. While we'd recommend a structure that at least separates your `raw` data, `clean` data and any `docs` files you have (eg literature reviews, research updates, other notes to self, etc) - this is a space each RA can do whatever they please with. 
-
-
-Below is a minimal representation of what the Box structure looks like. 
-
-```
-ejlab
- ├── projects
- │   ├── covid_housing_precarity
- │   ├── covid_rental_discrimination
- │   └── cafos_nc 
- ├── clean
- │	 ├── boundaries
- │	 ├── rsei
- │	 ├── polidata
- │	 └── pm25
- └── raw
-  	 ├── boundaries
-     ├── rsei
-     ├── polidata
-     └── pm25
-```
-
-### VM's {-}
-
-There are a few datasets that should only exist on **Duke owned machines** (the VM's) or (if they have even higher protections) that can only exist in the **protected research data network** (PRDN). Information on getting access to those spaces can be found in the onboarding section. This includes the original datasets, and ANY data that is created from it/combined with it/modeled using it, excluding simple tables that might be need to go in a publication. The datasets currently used in lab that these protections apply to are: 
-
-* InfoUSA
-
-For projects that work with a protected dataset, most of the work will occur on the VM itself. This doesn't change the workflow very much as all the tools we work through (Box and GitHub Desktop) are available through the VM as well. 
 
 ## Basics of GitHub {-}
 

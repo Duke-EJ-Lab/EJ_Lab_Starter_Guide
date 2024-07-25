@@ -22,4 +22,7 @@ The EJ Lab is an interdisciplinary group that works across the Kenan Institute f
 
 The EJ Lab aims to provide community partners with access to data-driven research in the form that’s most useful to them - whether that be peer reviewed papers, policy briefs, or public use data tools. We are currently focused on examining environmental disparities in housing markets and neighborhoods, social and environmental determinants of health for communities, and the efficacy of environmental justice policy solutions.
 
+The EJ Lab Starter Guide location is: https://duke-ej-lab.github.io/EJ_Lab_Starter_Guide/onboarding.html#how-to-onboard-to-ej-lab
+
+
 ## Goals {-}
