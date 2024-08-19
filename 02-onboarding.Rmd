@@ -24,7 +24,7 @@ Specifically, MFA is required when connecting to Duke's virtual private network 
 
 * **Connect to EJ Lab virtual machine**: Open the Remote Desktop Application, click "+ Add" to add a new PC. The PC name is **see this link**.  Your netid and password are required to login.
 
-* **OPTIONAL - Git account**: For users who will be coding, ensure you have a Git account and request access from EJLab staff.
+* **OPTIONAL - Git account**: For users who will be coding, ensure you have a Git account and request access from EJLab staff.  Onboarding to GitHub is outlined in the GitHub-HelloWorld repo with video tutorial additionally located on EJ Lab network attached storage drive general/Projects/Onboarding
 
 
 ### Tasks for non-Duke-affiliated research affiliates:
@@ -35,9 +35,9 @@ Specifically, MFA is required when connecting to Duke's virtual private network 
 
 
 ### Tasks for EJ Lab staff for each new user:
-* Research Toolkits:  Add the user's netid in Research Toolkits.  Once the user's netid is added, the netid now has permissions to log into the EJ Lab remote computer.
+* Research Toolkits:  Add the user's netid in Research Toolkits as part of team "Members" and as a separate indivudal team (e.g. Student_Sarah).  Once the user's netid is added to team "Members", the netid now has permissions to log into the EJ Lab remote computer. The user's netid as part of a separate team allows personalized permissions for each project folder.
 * Create user folder in student or affiliate network attached storage drive
-* If appropriate, invite user to Git account, invite to specific folders as needed
+* If appropriate, invite user to Git account, invite users to specific GitHub repos as needed
 * Set Permissions on network attached storage drives for each new netid
 * request guest account, if applicable (see above)
 * if any IT links are outdated above, email IT and request updated information
@@ -56,7 +56,7 @@ Code for lab projects all lives in the [**lab GitHub**](https://github.com/Duke-
 
 Data are stored on network attached storage drives accessible via the EJLab remote computer.
 
-Remote computer is:
+Remote computer is:[request specific name/path from EJ Lab staff, redacted for privacy]
 
 Network attached storage drives are:
 
@@ -64,6 +64,8 @@ Network attached storage drives are:
 (2) For student and postdoctoral research: ejlab_students
 (3) for project data: ejlab_general
 (4) for project archive:ejlab_archive
+
+Request specific pathways from EjLab staff. Redacted for privacy.
 
 
 * **Data** 
@@ -99,7 +101,7 @@ There are a few datasets that should only exist on **Duke owned machines** (the 
 
 * InfoUSA
 
-For projects that work with a protected dataset, most of the work will occur on the VM itself. This doesn't change the workflow very much as all the tools we work through (Box and GitHub Desktop) are available through the VM as well. 
+For projects that work with a protected dataset, all of the work will occur on the VM itself or Duke-owned laptops.
 
 ### Individual Code Organization {-}
 
@@ -121,11 +123,9 @@ In addition to the code repositories, this [EJ_Lab_Starter_Guide](https://github
 
 ## Basics of GitHub {-}
 
-Though it's much more complicated and has tons of more intricate use cases, at it's most basic we can think of git as similar to Box. A file exists in Box in the cloud, and sometimes also exists on your local computer. You can make changes on your computer, and that can change what's in the cloud (and therefore what's on your friend's computer). 
+The purpose is version control for coding.
 
 GitHub uses "repositories" (repos) as buckets that contain individual projects. 
-
-Git is a little more manual than Box though! You have to manually let it know when to take action - and there are 3 actions you need to know about.
 
 A **commit** is basically like saving your progress. You're telling git to pay attention and create a save point of what's changed since you last committed. This is the building block of a repo, each commit should be a bite sized change in your work.
 
